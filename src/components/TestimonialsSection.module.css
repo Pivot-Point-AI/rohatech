@@ -1,0 +1,130 @@
+.desktopSection {
+  aspect-ratio: 1920 / 1919;
+}
+
+.pageHeading {
+  left: 50%;
+  transform: translateX(-50%);
+  top: 7.188vw;
+  width: 23.906vw;
+  height: 4.896vw;
+  font-size: 4.063vw;
+  line-height: 4.896vw;
+  font-weight: 700;
+  text-align: center;
+  white-space: nowrap;
+}
+
+.featuredQuote {
+  left: 50%;
+  transform: translateX(-50%);
+  top: 14.167vw;
+  width: 76.719vw;
+  height: 5.417vw;
+  font-size: 2.083vw;
+  line-height: 2.708vw;
+  font-weight: 400;
+  text-align: center;
+}
+
+/* Testimonial cards — left/top are data-driven, kept inline */
+.testimonialCard {
+  width: 25.052vw;
+  height: 23.75vw;
+  background: #F3F4F6;
+  border-radius: 1.146vw;
+}
+
+.quoteMark {
+  left: 8.316%;
+  top: 8.991%;
+  width: 9.979%;
+  height: 10.088%;
+  font-size: 4vw;
+  line-height: 1;
+  color: #F39C33;
+  font-family: Georgia, serif;
+  display: flex;
+  align-items: flex-start;
+}
+
+.cardName {
+  left: 24.532%;
+  top: 9.649%;
+  height: 8.772%;
+  font-size: 1.25vw;
+  line-height: 2.083vw;
+  font-weight: 700;
+  letter-spacing: -0.32px;
+  white-space: nowrap;
+  display: flex;
+  align-items: center;
+}
+
+.cardAvatar {
+  left: 81.705%;
+  top: 8.772%;
+  width: 9.979%;
+  height: 10.526%;
+  border-radius: 50%;
+}
+
+/* cardText height is data-driven (card.textH), kept inline */
+.cardText {
+  left: 8.316%;
+  top: 28.070%;
+  width: 83.368%;
+  font-size: 1.042vw;
+  line-height: 160%;
+  font-weight: 400;
+}
+
+.partnersHeading {
+  left: 50%;
+  transform: translateX(-50%);
+  top: 83.646vw;
+  width: 41.094vw;
+  height: 4.896vw;
+  font-size: 4.063vw;
+  line-height: 4.896vw;
+  font-weight: 400;
+  text-align: center;
+  white-space: nowrap;
+}
+
+.partnerTabs {
+  left: 50%;
+  transform: translateX(-50%);
+  top: 90.625vw;
+  width: 91.146vw;
+  height: 6.042vw;
+  border-radius: 1.35vw;
+  padding: 0.253vw;
+  align-items: flex-start;
+}
+
+/* partnerBtn background is state-driven (activePartner === i), kept inline */
+.partnerBtn {
+  flex: 1 0 0;
+  height: 5.569vw;
+  padding: 1.35vw;
+  gap: 0.844vw;
+  border-radius: 1.181vw;
+  box-shadow: none;
+}
+
+.partnerLogoWrapper {
+  width: 8.606vw;
+  height: 2.869vw;
+  gap: 0.417vw;
+}
+
+/* partnerImage width/height are data-driven, kept inline */
+
+.partnerName {
+  font-size: 1.244vw;
+  line-height: 1.510vw;
+  font-weight: 400;
+  color: #000000;
+  white-space: nowrap;
+}

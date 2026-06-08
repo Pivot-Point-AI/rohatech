@@ -1,0 +1,104 @@
+.mobileCardWrapper {
+  min-height: 260px;
+}
+
+.mobileGradient {
+  background: linear-gradient(180deg, rgba(255, 255, 255, 0.4) 0%, #fff 100%);
+}
+
+.desktopSection {
+  aspect-ratio: 1920 / 1080;
+}
+
+/* Image frame */
+.imageFrame {
+  left: 6.25%;
+  top: 7.292vw;
+  width: 87.5vw;
+  height: 41.667vw;
+  border-radius: 5.208vw;
+}
+
+/* Gradient overlay inside frame */
+.frameGradient {
+  top: -8.375%;
+  height: 116.75%;
+  background: linear-gradient(180deg, rgba(255, 255, 255, 0.5) 0%, #ffffff 100%);
+}
+
+/* Left column */
+.leftHeading {
+  left: 4.167%;
+  top: 22%;
+  width: 41.369%;
+  height: 20.25%;
+  font-size: 3.229vw;
+  line-height: 130%;
+  font-weight: 400;
+}
+
+.leftDesc {
+  left: 4.167%;
+  top: 46.25%;
+  width: 38.690%;
+  height: 18%;
+  font-size: 0.938vw;
+  line-height: 1.25vw;
+  font-weight: 400;
+}
+
+.contactBtn {
+  left: 4.167%;
+  top: 69.75%;
+  width: 13.571%;
+  height: 7%;
+  border-radius: 9999px;
+}
+
+.contactBtnText {
+  font-size: 0.938vw;
+  line-height: 1.25vw;
+  font-weight: 500;
+}
+
+/* FAQ card — right/top/height are dynamic (isOpen state), kept inline */
+.faqCard {
+  right: 4.167%;
+  width: 43.810%;
+  background: rgba(255, 255, 255, 0.6);
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(0, 0, 0, 0.08);
+  border-radius: 1.042vw;
+  transition: height 0.3s ease;
+}
+
+/* Question title — top/height are dynamic (isOpen state), kept inline */
+.faqQuestion {
+  left: 6.793%;
+  font-size: 1.458vw;
+  line-height: 1.25vw;
+  font-weight: 500;
+  white-space: nowrap;
+}
+
+/* Answer */
+.faqAnswer {
+  left: 6.793%;
+  top: 39.754%;
+  width: 88.315%;
+  height: 39.344%;
+  font-size: 0.729vw;
+  line-height: 1.25vw;
+  font-weight: 400;
+}
+
+/* Toggle icon — right/top/height/transform are dynamic, kept inline */
+.faqToggle {
+  width: 4.348%;
+  transition: transform 0.3s ease;
+}
+
+/* Mobile FAQ toggle */
+.mobileFaqToggle {
+  transition: transform 0.2s;
+}

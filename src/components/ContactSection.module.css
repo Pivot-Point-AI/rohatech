@@ -1,0 +1,210 @@
+.desktopSection {
+  aspect-ratio: 1920 / 955;
+}
+
+.heading {
+  left: 6.25vw;
+  top: 10.156vw;
+  width: 13.594vw;
+  height: 3.125vw;
+  font-size: 2.604vw;
+  line-height: 3.125vw;
+  font-weight: 700;
+}
+
+.subtitle {
+  left: 32.292vw;
+  top: 10vw;
+  width: 61.406vw;
+  height: 3.438vw;
+  font-size: 1.563vw;
+  line-height: 1.875vw;
+  font-weight: 400;
+  color: #717171;
+}
+
+.formCard {
+  left: 6.25vw;
+  top: 15.521vw;
+  width: 42.188vw;
+  height: 33.073vw;
+  background: #F3F4F6;
+  border-radius: 1.042vw;
+}
+
+.formHeading {
+  left: 4.938%;
+  top: 6.299%;
+  width: 25.679%;
+  height: 7.244%;
+  font-size: 1.979vw;
+  line-height: 2.396vw;
+  font-weight: 400;
+}
+
+.labelName {
+  left: 4.938%;
+  top: 16.693%;
+  font-size: 0.625vw;
+  line-height: 1.042vw;
+  font-weight: 400;
+}
+
+.inputName {
+  left: 4.938%;
+  top: 21.732%;
+  width: 42.593%;
+  height: 7.874%;
+  border-radius: 0.625vw;
+  padding-left: 0.781vw;
+  font-size: 0.625vw;
+  color: #717171;
+  border: none;
+}
+
+.labelPhone {
+  left: 52.469%;
+  top: 16.693%;
+  font-size: 0.625vw;
+  line-height: 1.042vw;
+  font-weight: 400;
+}
+
+.inputPhone {
+  left: 52.469%;
+  top: 21.732%;
+  width: 42.593%;
+  height: 7.874%;
+  border-radius: 0.625vw;
+  padding-left: 0.781vw;
+  font-size: 0.625vw;
+  color: #717171;
+  border: none;
+}
+
+.labelEmail {
+  left: 4.938%;
+  top: 35.906%;
+  font-size: 0.625vw;
+  line-height: 1.042vw;
+  font-weight: 400;
+}
+
+.inputEmail {
+  left: 4.938%;
+  top: 40.945%;
+  width: 90.123%;
+  height: 7.874%;
+  border-radius: 0.625vw;
+  padding-left: 0.781vw;
+  font-size: 0.625vw;
+  color: #717171;
+  border: none;
+}
+
+.labelMessage {
+  left: 4.938%;
+  top: 55.118%;
+  font-size: 0.625vw;
+  line-height: 1.042vw;
+  font-weight: 400;
+}
+
+.textarea {
+  left: 4.938%;
+  top: 60.157%;
+  width: 90.123%;
+  height: 19.370%;
+  border-radius: 0.625vw;
+  padding-left: 0.781vw;
+  padding-top: 0.521vw;
+  font-size: 0.625vw;
+  border: none;
+}
+
+.submitBtn {
+  left: 4.938%;
+  top: 85.827%;
+  width: 28.148%;
+  height: 8.819%;
+  border-radius: 9999px;
+  font-size: 0.833vw;
+  font-weight: 400;
+}
+
+.infoCard {
+  left: 51.563vw;
+  top: 15.521vw;
+  width: 42.188vw;
+  height: 15.417vw;
+  background: #F3F4F6;
+  border-radius: 1.042vw;
+}
+
+.infoHeading {
+  left: 4.938%;
+  top: 13.514%;
+  width: 61.728%;
+  height: 15.541%;
+  font-size: 1.979vw;
+  line-height: 2.396vw;
+  font-weight: 400;
+}
+
+.infoPhone {
+  left: 4.938%;
+  top: 42.568%;
+  height: 8.108%;
+}
+
+.infoEmail {
+  left: 52%;
+  top: 42.568%;
+  height: 8.108%;
+}
+
+.infoAddress {
+  left: 4.938%;
+  top: 66.216%;
+  right: 4.938%;
+}
+
+.infoIcon {
+  width: 1.563vw;
+  height: 1.563vw;
+  flex-shrink: 0;
+}
+
+.infoIconLg {
+  width: 1.594vw;
+  height: 1.594vw;
+  flex-shrink: 0;
+  margin-top: 0.1vw;
+}
+
+.infoText {
+  font-size: 1.042vw;
+  line-height: 1.25vw;
+  font-weight: 400;
+  color: #000;
+}
+
+.infoTextAddress {
+  font-size: 1.042vw;
+  line-height: 1.563vw;
+  font-weight: 400;
+  color: #000;
+}
+
+.mapCard {
+  left: 51.563vw;
+  top: 33.177vw;
+  width: 42.188vw;
+  height: 15.417vw;
+  border-radius: 1.042vw;
+}
+
+.iframe {
+  border: 0;
+  display: block;
+}
