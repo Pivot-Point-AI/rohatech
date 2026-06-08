@@ -75,6 +75,7 @@ export default function AboutHero() {
     </section>
 
 
+
     {/* ── DESKTOP ── */}
     <section className={`hidden md:block relative w-full overflow-hidden ${styles.desktopSection}`}>
 
