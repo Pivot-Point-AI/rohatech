@@ -17,7 +17,7 @@ export default function AboutHero() {
 
       <div className={`relative w-full overflow-hidden ${styles.mobileHeroWrapper}`}>
         <Image
-          src="/images/about-hero-bg.png "
+          src="/images/about-hero-bg.png"
           alt=""
           fill
           sizes="100vw"
@@ -74,13 +74,14 @@ export default function AboutHero() {
       </div>
     </section>
 
+
     {/* ── DESKTOP ── */}
     <section className={`hidden md:block relative w-full overflow-hidden ${styles.desktopSection}`}>
 
       {/* Background image wrapper */}
       <div className={`absolute left-0 right-0 overflow-hidden ${styles.bgWrapper}`}>
         <Image
-          src="/images/about-hero-bg.png "
+          src="/images/about-hero-bg.png"
           alt=""
           fill
           sizes="100vw"
