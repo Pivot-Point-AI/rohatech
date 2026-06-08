@@ -1,0 +1,78 @@
+.mobileSection {
+  min-height: 100svh;
+}
+
+.mobileGradient {
+  background: linear-gradient(to top, rgba(0, 0, 0, 0.92) 0%, rgba(0, 0, 0, 0.55) 50%, rgba(0, 0, 0, 0.25) 100%);
+}
+
+.mobileHeading {
+  font-size: clamp(28px, 9vw, 48px);
+}
+
+.desktopSection {
+  aspect-ratio: 1920 / 1080;
+}
+
+.card {
+  left: 11.458%;
+  top: 46.296%;
+  width: 17.448%;
+  height: 38.519%;
+  border-radius: 0.625vw;
+}
+
+.cardTopText {
+  left: 5.970%;
+  top: 6.250%;
+  width: 88.060%;
+  height: 28.846%;
+  font-size: 1.146vw;
+  line-height: 1.25vw;
+}
+
+.cardNumber {
+  left: 5.970%;
+  top: 61.298%;
+  width: 62.687%;
+  font-size: 5.208vw;
+  line-height: 1.25vw;
+}
+
+.cardBottomText {
+  left: 5.970%;
+  top: 81.731%;
+  width: 88.060%;
+  height: 11.538%;
+  font-size: 1.146vw;
+  line-height: 1.25vw;
+}
+
+.headline {
+  left: 31.719%;
+  top: 47.130%;
+  width: 34.635%;
+  height: 22.222%;
+  font-size: 4.167vw;
+  line-height: 100%;
+  letter-spacing: -0.052vw;
+}
+
+.description {
+  left: 63.125%;
+  top: 70.093%;
+  width: 25.104%;
+  height: 14.815%;
+  font-size: 1.146vw;
+  line-height: 1.667vw;
+}
+
+.learnMoreBtn {
+  left: 76.667%;
+  top: 85.556%;
+  width: 11.875%;
+  height: 5.185%;
+  border-radius: 9999px;
+  font-size: 0.833vw;
+  line-height: 1.25vw;
+}

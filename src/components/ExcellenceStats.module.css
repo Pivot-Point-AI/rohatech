@@ -1,0 +1,98 @@
+.mobileHeading {
+  letter-spacing: -0.02em;
+}
+
+.mobileStatNumber {
+  color: #78EB54;
+}
+
+.desktopSection {
+  position: relative;
+  width: 100%;
+  overflow: hidden;
+  background: #fff;
+  aspect-ratio: 1920 / 808;
+}
+
+.worldMapSvg {
+  object-fit: cover;
+  z-index: 0;
+}
+
+.bgContainer {
+  position: absolute;
+  width: 106.04%;
+  height: 121.29%;
+  left: -3.02%;
+  top: -10.64%;
+  transform: rotate(180deg);
+}
+
+.vector {
+  position: absolute;
+  background: #F2F2F2;
+  transform: rotate(180deg);
+}
+
+.heading {
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  top: 17.65%;
+  width: 33.698%;
+  font-size: 5.208vw;
+  line-height: 1.16;
+  letter-spacing: -0.02em;
+  font-weight: 500;
+  text-align: center;
+  color: #000000;
+  margin: 0;
+  padding: 0;
+  font-family: "Aeonik", "DM Sans", "Inter", sans-serif;
+  white-space: nowrap;
+}
+
+.statsRow {
+  position: absolute;
+  left: 12.344%;
+  top: 68.193%;
+  width: 77.877%;
+  height: 14.505%;
+}
+
+.statNum {
+  position: absolute;
+  height: 60.751%;
+  font-size: 5.208vw;
+  line-height: 1;
+  color: #78EB54;
+  font-weight: 400;
+  display: flex;
+  align-items: center;
+  font-family: "Aeonik", "DM Sans", "Inter", sans-serif;
+}
+
+.statLabel {
+  position: absolute;
+  font-size: 1.146vw;
+  line-height: 0.909;
+  text-align: center;
+  color: #000000;
+  font-weight: 400;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: "Aeonik", "DM Sans", "Inter", sans-serif;
+}
+
+.num100Plus { left: 4.010%; top: 0%; width: 13.381%; }
+.lbl100Plus { left: 4.55%; right: 83.15%; top: 82.94%; bottom: 0%; white-space: nowrap; }
+
+.num60Plus { left: 32.318%; top: 0%; width: 10.837%; }
+.lbl60Plus { left: 32.32%; right: 56.78%; top: 82.94%; bottom: 0%; }
+
+.num250 { left: 58.362%; top: 0%; width: 11.059%; }
+.lbl250 { left: 58.13%; right: 30.23%; top: 82.94%; bottom: 0%; white-space: nowrap; }
+
+.num5 { left: 88.61%; right: 7.95%; top: 0.3%; bottom: 39.55%; }
+.lbl5 { left: 84.68%; right: 4.01%; top: 82.64%; bottom: 0.3%; white-space: nowrap; }
