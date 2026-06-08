@@ -1,0 +1,104 @@
+.desktopSection {
+  aspect-ratio: 1920 / 1080;
+  background: #F3F4F6;
+}
+
+/* ── Left column ── */
+
+/* "Industries" label — left=134.07 top=200.37 20px/24px */
+.label {
+  left: 6.983%;    /* 134.07/1920 */
+  top: 18.553%;    /* 200.37/1080 */
+  font-size: 1.042vw;  /* 20/1920 */
+  line-height: 1.25vw; /* 24/1920 */
+}
+
+/* Heading — left=134 top=247 w=490 h=144 60px/72px */
+.heading {
+  left: 6.979%;    /* 134/1920 */
+  top: 22.870%;    /* 247/1080 */
+  width: 25.521%;  /* 490/1920 */
+  height: 13.333%; /* 144/1080 */
+  font-size: 3.125vw;  /* 60/1920 */
+  line-height: 3.75vw; /* 72/1920 */
+}
+
+/* Description — left=134 top=403 w=689 h=80 24px/40px */
+.description {
+  left: 6.979%;    /* 134/1920 */
+  top: 37.315%;    /* 403/1080 */
+  width: 35.885%;  /* 689/1920 */
+  height: 7.407%;  /* 80/1080 */
+  font-size: 1.25vw;   /* 24/1920 */
+  line-height: 2.083vw;/* 40/1920 */
+}
+
+/* Learn More button — left=134 top=559 w=228 h=56 */
+.btn {
+  left: 6.979%;    /* 134/1920 */
+  top: 51.759%;    /* 559/1080 */
+  width: 11.875%;  /* 228/1920 */
+  height: 5.185%;  /* 56/1080 */
+  border-radius: 9999px;
+}
+
+.btnText {
+  font-size: 0.833vw;  /* 16/1920 */
+  line-height: 1.25vw; /* 24/1920 */
+}
+
+/* ── Cards container — left=1008 top=202 w=782 h=677 gap=16.3 ── */
+.cardsContainer {
+  left: 52.5%;     /* 1008/1920 */
+  top: 18.704%;    /* 202/1080 — calc(50%-677/2+0.5)/1080 */
+  width: 40.729%;  /* 782/1920 */
+  height: 62.685%; /* 677/1080 */
+  gap: 0.849vw;    /* 16.3/1920 */
+}
+
+/* ── Card — 782×157px, border, radius=4.07px ── */
+.card {
+  width: 100%;
+  height: 8.177vw;  /* 157/1920 */
+  border: 1px solid rgba(0, 0, 0, 0.08);
+  border-radius: 0.212vw; /* 4.07/1920 */
+}
+
+/* ── Icon — 32.53×32.53px, left=-15.28px, top=33.53px ──
+   Figma: icon wrapper left=-15.28px; icon is first flex child.
+   Icon overflows card's left edge intentionally. */
+.cardIcon {
+  left: -0.796vw;  /* -15.28/1920 — overflows card left, matching Figma */
+  top: 1.747vw;    /* 33.53/1920 */
+  width: 1.694vw;  /* 32.53/1920 */
+  height: 1.694vw; /* 32.53/1920 */
+  border-radius: 0.212vw; /* 4.07/1920 */
+  backdrop-filter: blur(2px);
+}
+
+/* SVG inner content: 24.39×24.39 inside 32.53×32.53 = 74.97% */
+.cardIconInner {
+  width: 74.97%;
+  height: 74.97%;
+}
+
+/* ── Title — left=33.52px (=-15.28+32.53+16.27), top=33.53, h=32, 23.2563px/32px bold ── */
+.cardTitle {
+  left: 1.746vw;   /* 33.52/1920 — aligns with desc left */
+  top: 1.747vw;    /* 33.53/1920 */
+  height: 1.667vw; /* 32/1920 */
+  font-size: 1.211vw;   /* 23.2563/1920 */
+  line-height: 1.667vw; /* 32/1920 */
+  color: #0C0E0F;
+}
+
+/* ── Description — left=33px top=78px right=35px h=46px 16.3px/23px ── */
+.cardDesc {
+  left: 1.719vw;   /* 33/1920 */
+  top: 4.063vw;    /* 78/1920 */
+  right: 1.823vw;  /* 35/1920 */
+  height: 2.396vw; /* 46/1920 */
+  font-size: 0.849vw;   /* 16.3/1920 */
+  line-height: 1.198vw; /* 23/1920 */
+  color: #0C0E0F;
+}

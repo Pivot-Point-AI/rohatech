@@ -1,0 +1,62 @@
+.section {
+  height: 100svh;
+  min-height: 480px;
+}
+
+.glassStrip {
+  left: 84.583%;
+  width: 15.417%;
+  background: rgba(255, 255, 255, 0.1);
+  z-index: 10;
+}
+
+.aboutBtn {
+  left: 8.438%;
+  top: 20.000%;
+  width: 11.875%;
+  height: 5.185%;
+  border-radius: 9999px;
+  z-index: 20;
+}
+
+.aboutBtnText {
+  font-size: 0.833vw;
+  line-height: 1.25vw;
+}
+
+.arrowBtn {
+  left: 81.719%;
+  top: 47.407%;
+  width: 5.781%;
+  height: 5.185%;
+  border-radius: 9999px;
+  z-index: 20;
+}
+
+.arrowIcon {
+  width: 1.302vw;
+  height: 1.25vw;
+}
+
+.subtitle {
+  left: 8.438%;
+  top: 77.749%;
+  width: 16.302%;
+  height: 2.315%;
+  font-size: 1.146vw;
+  line-height: 1.302vw;
+  white-space: nowrap;
+  z-index: 20;
+}
+
+.title {
+  left: 8.438%;
+  top: 82.427%;
+  width: 35.729%;
+  height: 6.296%;
+  font-size: 3.125vw;
+  line-height: 3.542vw;
+  white-space: nowrap;
+  overflow: visible;
+  z-index: 20;
+}

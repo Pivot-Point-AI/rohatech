@@ -1,0 +1,94 @@
+.mobileHeading {
+  letter-spacing: -0.05em;
+}
+
+.footer {
+  aspect-ratio: 1920 / 908;
+}
+
+.footerBg {
+  position: absolute;
+  top: -3.646vw;
+  left: 0;
+  width: 100%;
+  height: 56.25vw;
+  object-fit: cover;
+  object-position: center;
+  display: block;
+  z-index: 1;
+}
+
+.darkBlur {
+  left: -17.915vw;
+  top: -7.065vw;
+  width: 125.469vw;
+  height: 61.302vw;
+  background: rgba(0, 0, 0, 0.55);
+  filter: blur(75px);
+  transform: rotate(17.72deg);
+  transform-origin: center center;
+  z-index: 2;
+}
+
+.glassStripes {
+  z-index: 3;
+}
+
+.glassStripe {
+  background: linear-gradient(270deg, rgba(255, 255, 255, 0.05) 0%, rgba(0, 0, 0, 0.05) 100%);
+}
+
+.bottomBlur {
+  left: 50%;
+  transform: translateX(-50%);
+  top: 40.156vw;
+  width: 110.156vw;
+  height: 31.198vw;
+  background: #000000;
+  filter: blur(150px);
+  z-index: 3;
+}
+
+.questionText {
+  left: 5.651vw;
+  top: 19.896vw;
+  width: 36.979vw;
+  height: 3.75vw;
+  font-size: 1.667vw;
+  line-height: 1.875vw;
+  z-index: 10;
+}
+
+.emailLink {
+  left: 5.651vw;
+  top: 24.896vw;
+  width: 17.240vw;
+  height: 1.875vw;
+  font-size: 1.667vw;
+  line-height: 1.875vw;
+  white-space: nowrap;
+  z-index: 10;
+}
+
+/* right / top / width are per-item (stay inline) */
+.serviceLink {
+  height: 1.771vw;
+  font-size: 1.458vw;
+  line-height: 1.771vw;
+  white-space: nowrap;
+  z-index: 10;
+}
+
+.footerHeading {
+  left: 50%;
+  transform: translateX(-50%);
+  top: 29.063vw;
+  width: 88.802vw;
+  height: 16.979vw;
+  font-size: 14.167vw;
+  line-height: 16.979vw;
+  letter-spacing: -0.05em;
+  white-space: nowrap;
+  text-align: center;
+  z-index: 10;
+}

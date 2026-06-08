@@ -1,0 +1,29 @@
+.desktopSection {
+  aspect-ratio: 1920 / 917;
+}
+
+.collaborationsBadge {
+  top: 7.292vw;
+  width: 15.208vw;
+  height: 5.052vw;
+  background: rgba(255, 255, 255, 0.1);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 9999px;
+}
+
+.collaborationsText {
+  font-size: 1.563vw;
+  line-height: 1.094vw;
+}
+
+.heading {
+  top: 14.487vw;
+  width: 33.021vw;
+  height: 3.75vw;
+  font-size: 2.799vw;
+  line-height: 3.75vw;
+  white-space: nowrap;
+}
+
+/* Partner circle positions/sizes are computed from data, kept inline */
+/* Partner image sizes are computed from data, kept inline */

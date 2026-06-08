@@ -1,0 +1,184 @@
+.mobileHeroWrapper {
+  height: 100vw;
+  border-radius: 0 0 8vw 8vw;
+}
+
+.mobileOverlay {
+  background: linear-gradient(180deg, rgba(0, 0, 0, 0.3) 0%, rgba(0, 0, 0, 0.75) 60%, rgba(0, 0, 0, 0.85) 100%);
+}
+
+.mobileGreenSpan {
+  color: #78EB54;
+}
+
+.mobileVideoWrapper {
+  aspect-ratio: 16 / 9;
+}
+
+.desktopSection {
+  aspect-ratio: 1920 / 1342;
+  background: #F3F4F6;
+}
+
+.bgWrapper {
+  top: -3.646vw;
+  height: 59.896vw;
+  border-radius: 0 0 10.417vw 10.417vw;
+}
+
+.darkGradient {
+  height: 56.25vw;
+  bottom: 13.646vw;
+  background: linear-gradient(180deg, #000000 36.34%, rgba(0, 0, 0, 0) 100%);
+  border-radius: 0 0 10.417vw 10.417vw;
+}
+
+.heading {
+  left: 50%;
+  transform: translateX(calc(-50% + 0.026vw));
+  top: 9.583vw;
+  width: 51.406vw;
+  height: 10.156vw;
+  font-size: 2.813vw;
+  line-height: 120%;
+}
+
+.greenSpan {
+  color: #78EB54;
+}
+
+.videoWrapper {
+  top: 21.406vw;
+  width: 28.333vw;
+  height: 15.885vw;
+  border-radius: 0.625vw;
+}
+
+.playBtn {
+  left: 48.438vw;
+  top: 27.760vw;
+  width: 3.125vw;
+  height: 3.125vw;
+}
+
+.subtext {
+  left: 50%;
+  transform: translateX(calc(-50% + 0.026vw));
+  top: 38.958vw;
+  width: 24.844vw;
+  height: 2.5vw;
+  font-size: 0.938vw;
+  line-height: 1.25vw;
+}
+
+.visionLabel {
+  left: 13.646vw;
+  top: 44.167vw;
+  width: 4.792vw;
+  height: 1.25vw;
+  font-size: 0.938vw;
+  line-height: 1.25vw;
+  white-space: nowrap;
+}
+
+.visionDesc {
+  left: 13.646vw;
+  top: 46.563vw;
+  width: 33.854vw;
+  height: 5vw;
+  font-size: 0.729vw;
+  line-height: 1.25vw;
+}
+
+.emailBtn {
+  left: 74.844vw;
+  top: 47.292vw;
+  width: 11.875vw;
+  height: 2.917vw;
+  border-radius: 9999px;
+}
+
+.emailBtnText {
+  font-size: 0.938vw;
+  line-height: 1.25vw;
+}
+
+.statsRow {
+  left: 12.344vw;
+  top: 60vw;
+  width: 77.877vw;
+  height: 6.104vw;
+}
+
+.stat100Plus {
+  left: 4.010%;
+  top: 0%;
+  width: 13.381%;
+  height: 60.751%;
+  font-size: 5.208vw;
+  line-height: 1;
+}
+
+.stat100PlusLabel {
+  left: 4.55%;
+  right: 83.15%;
+  top: 82.93%;
+  bottom: 0%;
+  font-size: 1.146vw;
+  line-height: 1.042vw;
+}
+
+.stat60Plus {
+  left: 32.318%;
+  top: 0%;
+  width: 10.837%;
+  height: 60.751%;
+  font-size: 5.208vw;
+  line-height: 1;
+}
+
+.stat60PlusLabel {
+  left: 32.32%;
+  right: 56.78%;
+  top: 82.93%;
+  bottom: 0%;
+  font-size: 1.146vw;
+  line-height: 1.042vw;
+}
+
+.stat250 {
+  left: 58.362%;
+  top: 0%;
+  width: 11.059%;
+  height: 60.751%;
+  font-size: 5.208vw;
+  line-height: 1;
+}
+
+.stat250Label {
+  left: 58.13%;
+  right: 30.23%;
+  top: 82.94%;
+  bottom: 0%;
+  font-size: 1.146vw;
+  line-height: 1.042vw;
+  white-space: nowrap;
+}
+
+.stat5 {
+  left: 88.61%;
+  right: 7.95%;
+  top: 0.3%;
+  bottom: 39.55%;
+  font-size: 5.208vw;
+  line-height: 1;
+}
+
+.stat5Label {
+  left: 84.68%;
+  right: 4.01%;
+  top: 82.64%;
+  bottom: 0.3%;
+  font-size: 1.146vw;
+  line-height: 1.042vw;
+}

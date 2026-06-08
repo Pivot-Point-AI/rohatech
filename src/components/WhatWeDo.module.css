@@ -1,0 +1,140 @@
+/* Icon image — 28×28 at top:5.17px left:4.62px inside the 38px container */
+.iconImg {
+  display: block;
+  width: 28px;
+  height: 28px;
+  object-fit: contain;
+  opacity: 1;
+  margin-top: 5.17px;
+  margin-left: 4.62px;
+}
+
+.desktopSection {
+  aspect-ratio: 1920 / 1080;
+}
+
+.servicesLabel {
+  left: 6.878%;
+  top: 21.550%;
+  font-size: 1.042vw;
+  line-height: 1.25vw;
+}
+
+.heading {
+  left: 6.878%;
+  top: 25.902%;
+  font-size: 3.125vw;
+  line-height: 3.75vw;
+}
+
+.description {
+  left: 6.878%;
+  top: 35.531%;
+  width: 29.171%;
+  height: 11.111%;
+  font-size: 1.25vw;
+  line-height: 2.083vw;
+}
+
+.btn {
+  left: 6.667%;
+  top: 49.444%;
+  width: 11.875%;
+  height: 5.185%;
+  border-radius: 9999px;
+  font-size: 0.833vw;
+  line-height: 1.25vw;
+}
+
+/* Service cards */
+.iconNetwork {
+  left: 43.405%;
+  top: 24.243%;
+  width: 1.979vw;
+  height: 1.979vw;
+}
+
+.titleNetwork {
+  left: 43.405%;
+  top: 31.493%;
+  font-size: 1.25vw;
+  line-height: 1.406vw;
+}
+
+.descNetwork {
+  left: 43.405%;
+  top: 36.228%;
+  width: 21.411%;
+  height: 11.852%;
+  font-size: 1.25vw;
+  line-height: 1.667vw;
+}
+
+.iconDigital {
+  left: 68.926%;
+  top: 24.243%;
+  width: 1.979vw;
+  height: 1.979vw;
+}
+
+.titleDigital {
+  left: 68.926%;
+  top: 31.493%;
+  font-size: 1.25vw;
+  line-height: 1.406vw;
+}
+
+.descDigital {
+  left: 68.926%;
+  top: 36.228%;
+  width: 21.411%;
+  height: 11.852%;
+  font-size: 1.25vw;
+  line-height: 1.667vw;
+}
+
+.iconCloud {
+  left: 43.405%;
+  top: 54.614%;
+  width: 1.979vw;
+  height: 1.979vw;
+}
+
+.titleCloud {
+  left: 43.405%;
+  top: 61.864%;
+  font-size: 1.25vw;
+  line-height: 1.406vw;
+}
+
+.descCloud {
+  left: 43.385%;
+  top: 66.574%;
+  width: 20.417%;
+  height: 11.852%;
+  font-size: 1.25vw;
+  line-height: 1.667vw;
+}
+
+.iconCyber {
+  left: 68.926%;
+  top: 54.614%;
+  width: 1.979vw;
+  height: 1.979vw;
+}
+
+.titleCyber {
+  left: 68.926%;
+  top: 61.864%;
+  font-size: 1.25vw;
+  line-height: 1.406vw;
+}
+
+.descCyber {
+  left: 68.906%;
+  top: 66.574%;
+  width: 19.844%;
+  height: 11.852%;
+  font-size: 1.25vw;
+  line-height: 1.667vw;
+}

@@ -1,0 +1,59 @@
+.mobileHeading {
+  letter-spacing: -0.025em;
+}
+
+.desktopSection {
+  aspect-ratio: 1920 / 762;
+}
+
+.carouselContainer {
+  left: 0;
+  top: 0.469vw;
+  width: 100%;
+  height: 29.375vw;
+}
+
+.carouselTrack {
+  position: absolute;
+  top: 7.031vw;
+  left: 4.792vw;
+  display: flex;
+  gap: 2.292vw;
+  width: max-content;
+  animation: scroll-gallery 28s linear infinite;
+  will-change: transform;
+}
+
+.carouselCard {
+  flex-shrink: 0;
+  overflow: hidden;
+  width: 27.292vw;
+  height: 15.313vw;
+  border-radius: 0.625vw;
+}
+
+.carouselImage {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.galleryHeading {
+  top: 26.198vw;
+  width: 9.115vw;
+  height: 3.438vw;
+  font-size: 2.917vw;
+  line-height: 3.438vw;
+  letter-spacing: -0.025em;
+  white-space: nowrap;
+}
+
+.galleryDesc {
+  left: 50%;
+  transform: translateX(calc(-50% - 0.026vw));
+  top: 29.948vw;
+  width: 44.844vw;
+  height: 4.375vw;
+  font-size: 1.563vw;
+  line-height: 2.188vw;
+}

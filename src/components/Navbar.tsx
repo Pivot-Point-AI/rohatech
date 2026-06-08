@@ -1,0 +1,245 @@
+"use client";
+
+import Link from "next/link";
+import { useState, useEffect } from "react";
+import styles from "./Navbar.module.css";
+
+const links = [
+  { label: "About Us",     href: "/about",        dropdown: false },
+  { label: "Services",     href: "/services",      dropdown: true  },
+  { label: "Solutions",    href: "/solutions",     dropdown: false },
+  { label: "Contact",      href: "/contact",       dropdown: false },
+  { label: "Testimonials", href: "/testimonials",  dropdown: false },
+];
+
+const slugify = (title: string) =>
+  title.toLowerCase().replace(/&/g, "and").replace(/[^a-z0-9]+/g, "-").replace(/(^-|-$)/g, "");
+
+const serviceLinks = [
+  "Digital Marketing",
+  "Application Modernization",
+  "Application Integration",
+  "UI/UX Design",
+  "Web & Full Stack",
+].map((label) => ({ label, href: `/services#${slugify(label)}` }));
+
+export default function Navbar({ theme = "dark" }: { theme?: "dark" | "light" }) {
+  const [open, setOpen] = useState(false);
+  const [scrolled, setScrolled] = useState(false);
+  const [servicesOpen, setServicesOpen] = useState(false);
+  const [mobileServicesOpen, setMobileServicesOpen] = useState(false);
+  const isDark = theme === "dark";
+
+  useEffect(() => {
+    const onScroll = () => setScrolled(window.scrollY > 10);
+    onScroll();
+    window.addEventListener("scroll", onScroll, { passive: true });
+    return () => window.removeEventListener("scroll", onScroll);
+  }, []);
+
+  /* When at top: fully transparent. When scrolled: frosted background. */
+  const bgClass = scrolled
+    ? isDark
+      ? "bg-black/70 backdrop-blur-md"
+      : "bg-white/90 backdrop-blur-md"
+    : "bg-transparent";
+
+  return (
+    <header
+      className={`fixed top-0 left-0 right-0 z-50 transition-colors duration-300 ${bgClass} ${styles.header}`}
+    >
+      {/* ── Desktop bar (lg+) ── */}
+      <nav className={`hidden lg:block relative w-full ${styles.desktopNav}`}>
+
+        {/* Logo */}
+        <Link
+          href="/"
+          className={`absolute font-bold select-none ${isDark ? "text-white" : "text-black"} ${styles.logo}`}
+        >
+          ROHATECH
+        </Link>
+
+        {/* Nav links */}
+        <ul className={`absolute top-1/2 -translate-y-1/2 flex items-center ${styles.navList}`}>
+          {links.map((link) => (
+            <li
+              key={link.label}
+              className="flex-none relative"
+              onMouseEnter={() => link.dropdown && setServicesOpen(true)}
+              onMouseLeave={() => link.dropdown && setServicesOpen(false)}
+            >
+              <Link
+                href={link.href}
+                className={`flex items-center font-medium whitespace-nowrap transition-colors ${
+                  isDark
+                    ? "text-white hover:text-white/75"
+                    : "text-black hover:text-black/60"
+                } ${styles.navLink}`}
+              >
+                {link.label}
+                {link.dropdown && (
+                  <svg
+                    className={styles.dropdownIcon}
+                    viewBox="0 0 16 16"
+                    fill="none"
+                    aria-hidden="true"
+                  >
+                    <path
+                      d="M4 6L8 10L12 6"
+                      stroke={isDark ? "white" : "black"}
+                      strokeWidth="1.5"
+                      strokeLinecap="round"
+                      strokeLinejoin="round"
+                    />
+                  </svg>
+                )}
+              </Link>
+
+              {link.dropdown && (
+                <ul
+                  className={`${styles.dropdownMenu} ${isDark ? styles.dropdownMenuDark : styles.dropdownMenuLight} ${servicesOpen ? styles.dropdownMenuOpen : ""}`}
+                >
+                  {serviceLinks.map((svc, i) => (
+                    <li key={svc.label}>
+                      <Link
+                        href={svc.href}
+                        className={`${styles.dropdownMenuItem} ${isDark ? styles.dropdownMenuItemDark : styles.dropdownMenuItemLight}`}
+                        onClick={() => setServicesOpen(false)}
+                        style={{ transitionDelay: servicesOpen ? `${i * 35}ms` : "0ms" }}
+                      >
+                        <span className={styles.dropdownMenuItemDot} aria-hidden="true" />
+                        <span>{svc.label}</span>
+                        <svg
+                          className={styles.dropdownMenuItemArrow}
+                          viewBox="0 0 16 16"
+                          fill="none"
+                          aria-hidden="true"
+                        >
+                          <path
+                            d="M6 4L10 8L6 12"
+                            stroke="currentColor"
+                            strokeWidth="1.5"
+                            strokeLinecap="round"
+                            strokeLinejoin="round"
+                          />
+                        </svg>
+                      </Link>
+                    </li>
+                  ))}
+                </ul>
+              )}
+            </li>
+          ))}
+        </ul>
+
+        {/* Search pill */}
+        <button
+          className={`absolute top-1/2 -translate-y-1/2 flex items-center justify-center transition-colors ${
+            isDark ? "bg-white hover:bg-white/90" : "bg-black hover:bg-black/80"
+          } ${styles.searchBtn}`}
+          aria-label="Search"
+        >
+          <svg
+            className={styles.searchIcon}
+            viewBox="0 0 24 24"
+            fill="none"
+            aria-hidden="true"
+          >
+            {isDark ? (
+              <>
+                <circle cx="10.5" cy="10.5" r="6.5" fill="black" />
+                <circle cx="10.5" cy="10.5" r="5"   fill="white" />
+                <line x1="15.5" y1="15.5" x2="21" y2="21" stroke="black" strokeWidth="2.2" strokeLinecap="round" />
+              </>
+            ) : (
+              <>
+                <circle cx="10.5" cy="10.5" r="6.5" fill="white" />
+                <circle cx="10.5" cy="10.5" r="5"   fill="black" />
+                <line x1="15.5" y1="15.5" x2="21" y2="21" stroke="white" strokeWidth="2.2" strokeLinecap="round" />
+              </>
+            )}
+          </svg>
+        </button>
+      </nav>
+
+      {/* Mobile bar */}
+      <div className={`lg:hidden flex items-center justify-between px-6 h-14 mt-2 ${scrolled ? (isDark ? "bg-black/80 backdrop-blur-md" : "bg-white/90 backdrop-blur-md") : "bg-transparent"}`}>
+        <Link href="/" className={`font-bold text-lg tracking-widest ${isDark ? "text-white" : "text-black"}`}>
+          ROHATECH
+        </Link>
+        <button
+          onClick={() => setOpen(!open)}
+          className={`p-2 ${isDark ? "text-white" : "text-black"}`}
+          aria-label="Toggle menu"
+        >
+          <span className={`block w-6 h-0.5 mb-1.5 ${isDark ? "bg-white" : "bg-black"}`} />
+          <span className={`block w-6 h-0.5 mb-1.5 ${isDark ? "bg-white" : "bg-black"}`} />
+          <span className={`block w-4 h-0.5 ${isDark ? "bg-white" : "bg-black"}`} />
+        </button>
+      </div>
+
+      {open && (
+        <div className={`lg:hidden px-6 py-6 border-t ${isDark ? "bg-black/95 border-white/10" : "bg-white border-black/10"}`}>
+          <ul className="flex flex-col gap-5">
+            {links.map((link) => (
+              <li key={link.label}>
+                {link.dropdown ? (
+                  <>
+                    <button
+                      type="button"
+                      onClick={() => setMobileServicesOpen(!mobileServicesOpen)}
+                      className={`flex items-center gap-2 font-medium text-base transition-colors ${isDark ? "text-white hover:text-white/70" : "text-black hover:text-black/60"}`}
+                      aria-expanded={mobileServicesOpen}
+                    >
+                      {link.label}
+                      <svg
+                        className={`${styles.dropdownIcon} ${mobileServicesOpen ? "rotate-180" : ""}`}
+                        viewBox="0 0 16 16"
+                        fill="none"
+                        aria-hidden="true"
+                      >
+                        <path
+                          d="M4 6L8 10L12 6"
+                          stroke={isDark ? "white" : "black"}
+                          strokeWidth="1.5"
+                          strokeLinecap="round"
+                          strokeLinejoin="round"
+                        />
+                      </svg>
+                    </button>
+                    {mobileServicesOpen && (
+                      <ul className="flex flex-col gap-3 mt-3 pl-4">
+                        {serviceLinks.map((svc) => (
+                          <li key={svc.label}>
+                            <Link
+                              href={svc.href}
+                              className={`text-sm transition-colors ${isDark ? "text-white/80 hover:text-white" : "text-black/70 hover:text-black"}`}
+                              onClick={() => {
+                                setOpen(false);
+                                setMobileServicesOpen(false);
+                              }}
+                            >
+                              {svc.label}
+                            </Link>
+                          </li>
+                        ))}
+                      </ul>
+                    )}
+                  </>
+                ) : (
+                  <Link
+                    href={link.href}
+                    className={`font-medium text-base transition-colors ${isDark ? "text-white hover:text-white/70" : "text-black hover:text-black/60"}`}
+                    onClick={() => setOpen(false)}
+                  >
+                    {link.label}
+                  </Link>
+                )}
+              </li>
+            ))}
+          </ul>
+        </div>
+      )}
+    </header>
+  );
+}

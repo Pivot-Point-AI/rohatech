@@ -1,0 +1,78 @@
+.mobileHeading {
+  letter-spacing: -0.025em;
+}
+
+.desktopSection {
+  aspect-ratio: 1920 / 1080;
+}
+
+/* Avatar circles — width/height/left/top are computed from data, stay inline */
+.avatar {
+  /* position/overflow/bg-gray-200 already in className */
+}
+
+.ourClientsLabel {
+  top: 9.367vw;
+  width: 5.156vw;
+  height: 1.25vw;
+  font-size: 1.042vw;
+  line-height: 1.25vw;
+  white-space: nowrap;
+}
+
+.heading {
+  left: 50%;
+  transform: translateX(calc(-50% + 0.026vw));
+  top: 11.224vw;
+  width: 24.115vw;
+  height: 6.875vw;
+  font-size: 2.917vw;
+  line-height: 3.438vw;
+  letter-spacing: -0.025em;
+}
+
+.card {
+  left: 27.083vw;
+  top: 21.120vw;
+  width: 45.781vw;
+  height: 18.646vw;
+  background: #F3F4F6;
+  border-radius: 3.125vw;
+}
+
+.openingQuote {
+  left: 30vw;
+  top: 23.125vw;
+  width: 3.594vw;
+  height: 2.552vw;
+  color: rgba(0, 0, 0, 0.15);
+  font-size: 3.594vw;
+  line-height: 1;
+  font-family: Georgia, serif;
+  display: flex;
+  align-items: flex-start;
+}
+
+.quoteText {
+  left: 50%;
+  transform: translateX(calc(-50% - 0.026vw));
+  top: 24.948vw;
+  width: 36.615vw;
+  height: 13.125vw;
+  font-size: 1.25vw;
+  line-height: 2.188vw;
+}
+
+.closingQuote {
+  left: 66.354vw;
+  top: 35.260vw;
+  width: 3.594vw;
+  height: 2.552vw;
+  color: rgba(0, 0, 0, 0.15);
+  font-size: 3.594vw;
+  line-height: 1;
+  font-family: Georgia, serif;
+  transform: rotate(180deg);
+  display: flex;
+  align-items: flex-start;
+}
