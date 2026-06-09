@@ -1,6 +1,7 @@
 "use client";
 
 import Link from "next/link";
+import Image from "next/image";
 import { useState, useEffect } from "react";
 import { usePathname, useRouter } from "next/navigation";
 import styles from "./Navbar.module.css";
@@ -62,11 +63,15 @@ export default function Navbar({ theme = "dark" }: { theme?: "dark" | "light" })
       <nav className={`hidden lg:block relative w-full ${styles.desktopNav}`}>
 
         {/* Logo */}
-        <Link
-          href="/"
-          className={`absolute font-bold select-none ${isDark ? "text-white" : "text-black"} ${styles.logo}`}
-        >
-          ROHATECH
+        <Link href="/" className={`absolute ${styles.logo}`}>
+          <img
+            src={isDark ? "/images/logowhite.png" : "/images/rohatech.png"}
+            alt="RohaTech"
+            width={160}
+            height={40}
+            className="object-contain"
+         
+          />
         </Link>
 
         {/* Nav links */}
@@ -182,8 +187,15 @@ export default function Navbar({ theme = "dark" }: { theme?: "dark" | "light" })
 
       {/* Mobile bar */}
       <div className={`lg:hidden flex items-center justify-between px-6 h-14 mt-2 ${scrolled ? (isDark ? "bg-black/80 backdrop-blur-md" : "bg-white/90 backdrop-blur-md") : "bg-transparent"}`}>
-        <Link href="/" className={`font-bold text-lg tracking-widest ${isDark ? "text-white" : "text-black"}`}>
-          ROHATECH
+        <Link href="/" className="flex items-center">
+          <Image
+            src={isDark ? "/images/logowhite.png" : "/images/rohatech.png"}
+            alt="RohaTech"
+            width={120}
+            height={32}
+            className="object-contain"
+            style={{ width: "120px", height: "32px" }}
+          />
         </Link>
         <div className="flex items-center gap-3">
           <button

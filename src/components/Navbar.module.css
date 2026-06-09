@@ -4,14 +4,16 @@
 }
 
 .desktopNav {
-  height: 2.917vw;
+  height: 4vw;
 }
 
 .logo {
   left: 6.25vw;
-  top: 33.929%;
-  font-size: 1.146vw;
-  letter-spacing: 0.14em;
+  top: 50%;
+  transform: translateY(-50%);
+  display: flex;
+  align-items: center;
+  height: 3vw;
 }
 
 .navList {
@@ -21,8 +23,8 @@
 }
 
 .navLink {
-  font-size: 0.833vw;
-  line-height: 1.25vw;
+  font-size: 1vw;
+  line-height: 1.4vw;
   gap: 0.208vw;
 }
 
