@@ -11,17 +11,23 @@
   top: 0.469vw;
   width: 100%;
   height: 29.375vw;
+  overflow: hidden;
+}
+
+/* 4 cards × 27.292vw + 4 gaps × 2.292vw = 118.336vw per set */
+@keyframes autoScroll {
+  0%   { transform: translateX(0); }
+  100% { transform: translateX(-118.336vw); }
 }
 
 .carouselTrack {
   position: absolute;
   top: 7.031vw;
-  left: 4.792vw;
+  left: 2.292vw;
   display: flex;
   gap: 2.292vw;
   width: max-content;
-  animation: scroll-gallery 28s linear infinite;
-  will-change: transform;
+  animation: autoScroll 20s linear infinite;
 }
 
 .carouselCard {

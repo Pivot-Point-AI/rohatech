@@ -61,24 +61,24 @@
   font-weight: 500;
 }
 
-/* FAQ card — right/top/height are dynamic (isOpen state), kept inline */
+/* FAQ card */
 .faqCard {
   right: 4.167%;
   width: 43.810%;
-  background: rgba(255, 255, 255, 0.6);
+  background: rgba(255, 255, 255, 0.1);
   backdrop-filter: blur(10px);
-  border: 1px solid rgba(0, 0, 0, 0.08);
+  -webkit-backdrop-filter: blur(10px);
   border-radius: 1.042vw;
   transition: height 0.3s ease;
 }
 
-/* Question title — top/height are dynamic (isOpen state), kept inline */
+/* Question title — width set inline per card (faq.qW) */
 .faqQuestion {
   left: 6.793%;
   font-size: 1.458vw;
   line-height: 1.25vw;
   font-weight: 500;
-  white-space: nowrap;
+  white-space: normal;
 }
 
 /* Answer */
@@ -92,7 +92,7 @@
   font-weight: 400;
 }
 
-/* Toggle icon — right/top/height/transform are dynamic, kept inline */
+/* Toggle icon */
 .faqToggle {
   width: 4.348%;
   transition: transform 0.3s ease;
@@ -101,4 +101,11 @@
 /* Mobile FAQ toggle */
 .mobileFaqToggle {
   transition: transform 0.2s;
+}
+
+/* ── Mobile responsiveness ── */
+@media (max-width: 767px) {
+  .mobileCardWrapper {
+    min-height: 220px;
+  }
 }

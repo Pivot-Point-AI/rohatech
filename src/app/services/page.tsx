@@ -30,10 +30,9 @@ export const metadata: Metadata = {
 
 export default function ServicesPage() {
   return (
-    <main className="flex flex-col w-full gap-0">
+    <main className="flex flex-col w-full gap-0 pt-20 lg:pt-0">
       <Navbar theme="light" />
       <ServicesContent />
-      <br />
       <Footer />
     </main>
   );

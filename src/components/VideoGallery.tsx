@@ -12,17 +12,18 @@ export default function VideoGallery() {
   return (
     <>
     {/* ── MOBILE ── */}
-    <section className="block md:hidden bg-white py-10 overflow-hidden">
-      <div className="flex gap-3 overflow-x-auto px-5 pb-4 no-scrollbar">
+    <section className="block md:hidden bg-white py-12 overflow-hidden">
+      <div className="px-5 mb-6">
+        <p className="text-xs uppercase text-black/40 tracking-widest mb-2">Gallery</p>
+        <h2 className={`text-3xl font-normal text-black mb-2 ${styles.mobileHeading}`}>Fintech</h2>
+        <p className="text-sm text-black/60 leading-relaxed">Driving innovation in banking and financial services through secure infrastructure, digital platforms, and intelligent integration.</p>
+      </div>
+      <div className="flex gap-4 overflow-x-auto px-5 pb-2 no-scrollbar">
         {images.map((src, i) => (
-          <div key={i} className="flex-shrink-0 w-64 h-36 rounded-xl overflow-hidden">
-            <Image src={src} alt={`Gallery ${i + 1}`} width={256} height={144} className="w-full h-full object-cover" />
+          <div key={i} className="flex-shrink-0 w-72 h-44 rounded-2xl overflow-hidden shadow-sm">
+            <Image src={src} alt={`Gallery ${i + 1}`} width={288} height={176} className="w-full h-full object-cover" />
           </div>
         ))}
-      </div>
-      <div className="text-center px-5 mt-6">
-        <h2 className={`text-2xl font-normal text-black mb-2 ${styles.mobileHeading}`}>Fintech</h2>
-        <p className="text-sm text-black leading-relaxed">Driving innovation in banking and financial services through secure infrastructure, digital platforms, and intelligent integration.</p>
       </div>
     </section>
 

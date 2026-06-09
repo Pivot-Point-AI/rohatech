@@ -53,23 +53,23 @@ export default function Industries() {
     <>
     {/* ── MOBILE ── */}
     <section id="solutions" className="block md:hidden bg-[#F3F4F6] px-5 py-14">
-      <p className="text-xs uppercase text-black mb-2 tracking-wide">Industries</p>
-      <h2 className="text-3xl font-normal text-black mb-4">Innovation Across Industries</h2>
-      <p className="text-sm text-black leading-relaxed mb-8">RohaTech delivers enterprise-grade technology solutions tailored to the unique demands of every sector we serve.</p>
-      <div className="flex flex-col gap-3 mb-8">
+      <p className="text-xs uppercase mb-2 tracking-wide" style={{ color: "#000000" }}>Industries</p>
+      <h2 className="text-3xl font-normal mb-3" style={{ color: "#000000" }}>Innovation Across Industries</h2>
+      <p className="text-sm leading-relaxed mb-8" style={{ color: "#00000099" }}>RohaTech delivers enterprise-grade technology solutions tailored to the unique demands of every sector we serve.</p>
+      <div className="flex flex-col gap-4 mb-8">
         {industries.map(({ title, icon, desc }) => (
-          <div key={title} className="bg-white rounded-xl p-4 flex gap-3">
-            <div className="w-8 h-8 bg-black rounded-lg flex items-center justify-center flex-shrink-0">
-              <div className="w-5 h-5">{icon}</div>
+          <div key={title} className="bg-white rounded-2xl p-5 flex gap-4 items-start">
+            <div className="w-11 h-11 bg-black rounded-xl flex items-center justify-center flex-shrink-0">
+              <div className="w-6 h-6">{icon}</div>
             </div>
             <div>
-              <p className="text-black font-bold text-sm mb-1">{title}</p>
-              <p className="text-black text-xs leading-relaxed">{desc}</p>
+              <p className="font-bold text-sm mb-1" style={{ color: "#000000" }}>{title}</p>
+              <p className="text-xs leading-relaxed" style={{ color: "#00000099" }}>{desc}</p>
             </div>
           </div>
         ))}
       </div>
-      <Link href="/contact" className="inline-flex items-center justify-center bg-[#78EB54] text-white text-sm font-medium px-6 py-3 rounded-full">Learn More</Link>
+      <Link href="/contact" className="flex items-center justify-center bg-[#78EB54] hover:bg-[#60d43e] transition-colors text-white text-sm font-medium px-6 py-3 rounded-full">Learn More</Link>
     </section>
 
     {/* ── DESKTOP ── */}

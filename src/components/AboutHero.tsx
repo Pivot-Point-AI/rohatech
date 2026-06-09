@@ -15,6 +15,7 @@ export default function AboutHero() {
     {/* ── MOBILE ── */}
     <section className="block md:hidden w-full bg-[#F3F4F6]">
 
+      {/* Hero image — fixed height, rounded bottom */}
       <div className={`relative w-full overflow-hidden ${styles.mobileHeroWrapper}`}>
         <Image
           src="/images/about-hero-bg.webp"
@@ -27,18 +28,28 @@ export default function AboutHero() {
         />
         <div className={`absolute inset-0 ${styles.mobileOverlay}`} />
 
-        <div className="absolute bottom-0 left-0 right-0 px-5 pb-8 pt-20">
-          <h1 className="text-2xl font-normal text-white leading-snug">
+
+        {/* Heading + CTA pinned to bottom of image */}
+        <div className="absolute bottom-0 left-0 right-0 z-10 px-6 pb-8 flex flex-col gap-4">
+          <div className="w-8 h-[3px] bg-[#78EB54] rounded-full" />
+          <h1 className={`text-white font-normal ${styles.mobileHeading}`}>
             Powering enterprises with secure, scalable, and future-ready{" "}
             <span className={styles.mobileGreenSpan}>technology solutions.</span>
           </h1>
-          <p className="text-white/80 text-xs mt-3 leading-relaxed">
+          <p className="text-white/55 text-xs leading-relaxed max-w-[260px]">
             RohaTech Recognized for Excellence in Digital Infrastructure Innovation
           </p>
+          <Link
+            href="mailto:info@rohatech.com.pk"
+            className="self-start inline-flex items-center justify-center bg-[#78EB54] hover:bg-[#60d43e] transition-colors text-white font-medium text-sm px-7 py-3 rounded-full"
+          >
+            Email Us
+          </Link>
         </div>
       </div>
 
-      <div className="px-5 mt-6">
+      {/* Video */}
+      <div className="bg-[#F3F4F6] px-5 pt-8 pb-10">
         <div className={`relative w-full rounded-2xl overflow-hidden shadow-md ${styles.mobileVideoWrapper}`}>
           <Image src="/images/abou.webp" alt="RohaTech showcase" fill sizes="100vw" className="object-cover" />
           <div className="absolute inset-0 flex items-center justify-center">
@@ -51,24 +62,20 @@ export default function AboutHero() {
         </div>
       </div>
 
-      <div className="px-5 mt-7">
-        <p className="text-xs font-semibold text-black uppercase tracking-widest mb-2">Our Vision</p>
-        <p className="text-sm text-black leading-relaxed mb-5">
+      {/* Vision */}
+      <div className="bg-[#F3F4F6] px-6 pt-2 pb-10 border-t border-black/10">
+        <p className="text-xs font-semibold uppercase tracking-widest mb-3 mt-8" style={{ color: "#000000" }}>Our Vision</p>
+        <p className="text-sm leading-relaxed" style={{ color: "#000000cc" }}>
           Our vision is built upon the foundation of our core values — placing customers and employees at the heart of everything we do. We are committed to being reliable, dependable, disciplined, and diligent.
         </p>
-        <Link
-          href="mailto:info@rohatech.com.pk"
-          className="inline-flex items-center justify-center bg-[#78EB54] text-white font-medium text-sm px-7 py-3 rounded-full"
-        >
-          Email Us
-        </Link>
       </div>
 
-      <div className="grid grid-cols-2 gap-y-6 gap-x-4 px-5 mt-8 pt-6 pb-10 border-t border-black/10">
+      {/* Stats */}
+      <div className="grid grid-cols-2 gap-y-8 gap-x-4 px-6 pt-8 pb-12 border-t border-black/10 bg-[#F3F4F6]">
         {stats.map((s) => (
           <div key={s.label}>
-            <p className="text-4xl font-normal text-black leading-none">{s.num}</p>
-            <p className="text-xs text-black/60 mt-1">{s.label}</p>
+            <p className="text-4xl font-normal leading-none" style={{ color: "#78EB54" }}>{s.num}</p>
+            <p className="text-xs mt-1" style={{ color: "#00000099" }}>{s.label}</p>
           </div>
         ))}
       </div>

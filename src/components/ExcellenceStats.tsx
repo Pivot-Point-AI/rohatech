@@ -12,15 +12,24 @@ export default function ExcellenceStats() {
   return (
     <>
     {/* ── MOBILE ── */}
-    <section className="block md:hidden bg-white px-5 py-14 text-center">
-      <h2 className={`text-3xl font-medium text-black mb-10 ${styles.mobileHeading}`}>A big record of<br />Excellence</h2>
-      <div className="grid grid-cols-2 gap-6">
-        {stats.map((s) => (
-          <div key={s.label}>
-            <p className={`text-4xl font-normal ${styles.mobileStatNumber}`}>{s.num}</p>
-            <p className="text-sm text-black mt-1">{s.label}</p>
-          </div>
-        ))}
+    <section className="block md:hidden relative bg-white overflow-hidden px-5 py-14 text-center">
+      <Image
+        src="/images/bg.webp"
+        alt=""
+        fill
+        aria-hidden="true"
+        className="object-cover object-center"
+      />
+      <div className="relative z-10">
+        <h2 className={`text-3xl font-medium text-black mb-10 ${styles.mobileHeading}`}>A big record of<br />Excellence</h2>
+        <div className="grid grid-cols-2 gap-6">
+          {stats.map((s) => (
+            <div key={s.label}>
+              <p className={`text-4xl font-normal ${styles.mobileStatNumber}`}>{s.num}</p>
+              <p className="text-sm text-black mt-1">{s.label}</p>
+            </div>
+          ))}
+        </div>
       </div>
     </section>
 

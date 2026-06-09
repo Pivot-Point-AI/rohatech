@@ -12,15 +12,25 @@ export default function Footer() {
   return (
     <>
     {/* ── MOBILE ── */}
-    <footer id="contact" className="block md:hidden bg-black px-5 pt-14 pb-8">
-      <p className="text-white font-medium text-base mb-1">Do you have any questions?<br />Drop us an email and we&apos;ll get right back to you...</p>
-      <a href="mailto:info@rohatech.com.pk" className="text-white font-medium text-sm hover:text-[#78EB54] transition-colors">info@rohatech.com.pk</a>
-      <div className="mt-8 flex flex-col gap-2">
-        {serviceLinks.map(({ label }) => (
-          <Link key={label} href="/services" className="text-white text-sm hover:text-[#78EB54] transition-colors">{label}</Link>
-        ))}
+    <footer id="contact" className="block md:hidden relative bg-black overflow-hidden px-5 pt-14 pb-8">
+      {/* eslint-disable-next-line @next/next/no-img-element */}
+      <img
+        src="/images/footer.webp"
+        alt=""
+        aria-hidden="true"
+        className="absolute top-0 left-0 w-full h-full object-cover object-center opacity-60"
+      />
+      <div className="absolute inset-0 bg-black/50" />
+      <div className="relative z-10">
+        <p className="text-white font-medium text-base mb-1">Do you have any questions?<br />Drop us an email and we&apos;ll get right back to you...</p>
+        <a href="mailto:info@rohatech.com.pk" className="text-white font-medium text-sm hover:text-[#78EB54] transition-colors">info@rohatech.com.pk</a>
+        <div className="mt-8 flex flex-col gap-2">
+          {serviceLinks.map(({ label }) => (
+            <Link key={label} href="/services" className="text-white text-sm hover:text-[#78EB54] transition-colors">{label}</Link>
+          ))}
+        </div>
+        <h2 className={`text-white font-medium mt-10 text-5xl leading-tight ${styles.mobileHeading}`}>Built for Growth</h2>
       </div>
-      <h2 className={`text-white font-medium mt-10 text-5xl leading-tight ${styles.mobileHeading}`}>Built for Growth</h2>
     </footer>
 
     {/* ── DESKTOP ── */}

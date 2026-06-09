@@ -1,10 +1,16 @@
 .mobileHeroWrapper {
-  height: 100vw;
+  height: min(115vw, 560px);
   border-radius: 0 0 8vw 8vw;
 }
 
 .mobileOverlay {
-  background: linear-gradient(180deg, rgba(0, 0, 0, 0.3) 0%, rgba(0, 0, 0, 0.75) 60%, rgba(0, 0, 0, 0.85) 100%);
+  background: linear-gradient(to top, rgba(0,0,0,0.85) 0%, rgba(0,0,0,0.4) 60%, rgba(0,0,0,0.15) 100%);
+}
+
+.mobileHeading {
+  font-size: clamp(26px, 7.5vw, 38px);
+  letter-spacing: -0.025em;
+  line-height: 1.12;
 }
 
 .mobileGreenSpan {

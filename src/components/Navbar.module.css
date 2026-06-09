@@ -26,6 +26,39 @@
   gap: 0.208vw;
 }
 
+.navLinkActiveDark {
+  color: #78EB54;
+  position: relative;
+}
+
+.navLinkActiveDark::after {
+  content: '';
+  position: absolute;
+  bottom: -0.3vw;
+  left: 0;
+  right: 0;
+  height: 0.125vw;
+  background: #78EB54;
+  border-radius: 9999px;
+}
+
+.navLinkActiveLight {
+  color: #000000;
+  font-weight: 700;
+  position: relative;
+}
+
+.navLinkActiveLight::after {
+  content: '';
+  position: absolute;
+  bottom: -0.3vw;
+  left: 0;
+  right: 0;
+  height: 0.125vw;
+  background: #000000;
+  border-radius: 9999px;
+}
+
 .dropdownIcon {
   width: 0.833vw;
   height: 0.833vw;

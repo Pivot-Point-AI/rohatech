@@ -76,39 +76,86 @@ export default function TestimonialsSection() {
   return (
     <>
     {/* ── MOBILE (< md) ── */}
-    <section className="block md:hidden bg-white px-5 py-14">
-      <h1 className="text-center text-4xl font-bold text-black mb-3">Testimonials</h1>
-      <p className="text-center text-base text-black mb-10 leading-relaxed">
-        Rohatech delivered end-to-end technology solutions that strengthened our infrastructure and positioned us for long-term growth.
-      </p>
-      <div className="flex flex-col gap-5">
+    <section className="block md:hidden bg-white">
+
+      {/* Dark hero header */}
+      <div className="bg-black px-6 pt-10 pb-10">
+        <p className="text-white/50 text-[10px] uppercase tracking-[0.2em] mb-3">Client Stories</p>
+        <h1 className="text-white font-bold text-3xl leading-tight mb-3" style={{ letterSpacing: "-0.02em" }}>
+          What Our Clients Say
+        </h1>
+        <p className="text-white/60 text-sm leading-relaxed">
+          Real results from real businesses — powered by RohaTech solutions.
+        </p>
+
+        {/* Stats row */}
+        <div className="flex gap-4 mt-7">
+          <div className="flex-1 bg-white/8 border border-white/10 rounded-2xl px-4 py-4 text-center">
+            <p className="text-[#78EB54] text-2xl font-bold leading-none">60+</p>
+            <p className="text-white/50 text-[10px] mt-1 uppercase tracking-wide">Clients</p>
+          </div>
+          <div className="flex-1 bg-white/8 border border-white/10 rounded-2xl px-4 py-4 text-center">
+            <p className="text-[#78EB54] text-2xl font-bold leading-none">100+</p>
+            <p className="text-white/50 text-[10px] mt-1 uppercase tracking-wide">Projects</p>
+          </div>
+          <div className="flex-1 bg-white/8 border border-white/10 rounded-2xl px-4 py-4 text-center">
+            <p className="text-[#78EB54] text-2xl font-bold leading-none">5★</p>
+            <p className="text-white/50 text-[10px] mt-1 uppercase tracking-wide">Rated</p>
+          </div>
+        </div>
+      </div>
+
+      {/* Testimonial cards */}
+      <div className="px-5 py-8 flex flex-col gap-4">
         {cards.map((card) => (
-          <div key={card.name} className="rounded-2xl bg-[#F3F4F6] p-6 relative">
-            <span className="text-4xl text-[#F39C33] font-serif leading-none">&ldquo;</span>
-            <div className="flex items-center gap-3 mb-4">
-              <div className="w-10 h-10 rounded-full overflow-hidden relative flex-shrink-0">
+          <div key={card.name} className="bg-white rounded-2xl border border-black/8 overflow-hidden">
+            {/* Card top — avatar + name */}
+            <div className="bg-[#F3F4F6] px-5 py-4 flex items-center gap-3">
+              <div className="w-11 h-11 rounded-full overflow-hidden relative flex-shrink-0 border-2 border-white shadow-sm">
                 <Image src={card.avatar} alt={card.name} fill className="object-cover" />
               </div>
-              <p className="text-base font-bold text-black">{card.name}</p>
+              <div>
+                <p className="font-bold text-sm" style={{ color: "#000000" }}>{card.name}</p>
+                <div className="flex gap-0.5 mt-0.5">
+                  {[...Array(5)].map((_, i) => (
+                    <svg key={i} width="10" height="10" viewBox="0 0 24 24" fill="#78EB54"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+                  ))}
+                </div>
+              </div>
             </div>
-            <p className="text-sm text-black leading-relaxed">{card.text}</p>
+            {/* Card body — quote */}
+            <div className="px-5 py-4">
+              <span className="text-3xl text-black/15 font-serif leading-none block mb-2">&ldquo;</span>
+              <p className="text-sm leading-relaxed" style={{ color: "#000000cc" }}>{card.text}</p>
+            </div>
           </div>
         ))}
       </div>
-      <h2 className="text-center text-3xl font-normal text-black mt-14 mb-6">Company Testimonials</h2>
-      <div className="flex flex-wrap justify-center gap-3">
-        {partners.map((p, i) => (
-          <button
-            key={i}
-            onClick={() => setActivePartner(i)}
-            className="flex items-center gap-2 px-4 py-2 rounded-xl transition-all"
-            style={{ background: activePartner === i ? "#fff" : "transparent", boxShadow: activePartner === i ? "0 2px 8px rgba(0,0,0,0.1)" : "none" }}
-          >
-            <Image src={p.img} alt={p.name} width={24} height={24} className="object-contain" />
-            <span className="text-sm text-black">{p.name}</span>
-          </button>
-        ))}
+
+      {/* Partners section */}
+      <div className="px-5 pb-10">
+        <div className="bg-[#F3F4F6] rounded-2xl px-5 py-6">
+          <p className="text-[10px] uppercase tracking-[0.2em] text-black/40 mb-1">Trusted By</p>
+          <h2 className="text-xl font-bold mb-5" style={{ color: "#000000" }}>Company Testimonials</h2>
+          <div className="flex flex-wrap gap-3">
+            {partners.map((p, i) => (
+              <button
+                key={i}
+                onClick={() => setActivePartner(i)}
+                className="flex items-center gap-2 px-4 py-2.5 rounded-xl transition-all border"
+                style={{
+                  background: activePartner === i ? "#000" : "#fff",
+                  borderColor: activePartner === i ? "#000" : "#00000015",
+                }}
+              >
+                <Image src={p.img} alt={p.name} width={24} height={24} className="object-contain" />
+                <span className="text-xs font-medium" style={{ color: activePartner === i ? "#fff" : "#000" }}>{p.name}</span>
+              </button>
+            ))}
+          </div>
+        </div>
       </div>
+
     </section>
 
     {/* ── DESKTOP (md+) ── */}

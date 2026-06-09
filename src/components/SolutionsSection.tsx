@@ -176,79 +176,99 @@ export default function SolutionsSection() {
         <div className={styles.pagination}>
           <button className={styles.prevBtn}>
             <svg className={styles.paginationArrow} viewBox="0 0 40 40" fill="none">
-              <path d="M25 8 L13 20 L25 32" stroke="#000" strokeWidth="3" strokeLinecap="round" strokeLinejoin="round" />
+              <line x1="30" y1="20" x2="10" y2="20" stroke="#000" strokeWidth="2.5" strokeLinecap="round" />
+              <polyline points="18,12 10,20 18,28" stroke="#000" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round" fill="none" />
             </svg>
             Previous
           </button>
           <button className={styles.nextBtn}>
             Next
             <svg className={styles.paginationArrow} viewBox="0 0 40 40" fill="none">
-              <path d="M15 8 L27 20 L15 32" stroke="#000" strokeWidth="3" strokeLinecap="round" strokeLinejoin="round" />
+              <line x1="10" y1="20" x2="30" y2="20" stroke="#000" strokeWidth="2.5" strokeLinecap="round" />
+              <polyline points="22,12 30,20 22,28" stroke="#000" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round" fill="none" />
             </svg>
           </button>
         </div>
       </section>
 
       {/* ── MOBILE (< md) ── */}
-      <section className="block md:hidden bg-white px-5 py-14">
-        <h2 className={`text-center text-4xl font-bold text-black mb-3 ${styles.mobileFontFamily}`}>
-          Our Work
-        </h2>
-        <p className={`text-center text-base text-black mb-8 ${styles.mobileFontFamily}`}>
-          Delivering Real-World Digital Solutions
-        </p>
+      <section className={`block md:hidden bg-white ${styles.mobileFontFamily}`}>
 
-        <div className="flex gap-2 overflow-x-auto pb-3 mb-8 no-scrollbar">
-          {TAB_LABELS.map((label) => (
-            <button
-              key={label}
-              onClick={() => setActiveTab(label)}
-              className={`flex-shrink-0 px-4 py-2 rounded-full text-sm font-normal border border-black whitespace-nowrap ${styles.mobileFontFamily}`}
-              style={{
-                backgroundColor: activeTab === label ? "#000" : "transparent",
-                color: activeTab === label ? "#fff" : "#000",
-                borderColor: activeTab === label ? "transparent" : "#000",
-                outline: "none",
-              }}
-            >
-              {label}
-            </button>
-          ))}
+        {/* Hero header */}
+        <div className="bg-black px-6 pt-10 pb-8">
+          <p className="text-white/50 text-[10px] uppercase tracking-[0.2em] mb-3">Our Work</p>
+          <h2 className="text-white font-bold text-3xl leading-tight mb-3" style={{ letterSpacing: "-0.02em" }}>
+            Delivering Real-World<br />Digital Solutions
+          </h2>
+          <p className="text-white/60 text-sm leading-relaxed">
+            Innovative technology built for every industry and sector.
+          </p>
         </div>
 
-        <div className="flex flex-col gap-5">
+        {/* Filter tabs */}
+        <div className="px-5 py-5 border-b border-black/8">
+          <div className="flex gap-2 overflow-x-auto pb-1 no-scrollbar">
+            {TAB_LABELS.map((label) => (
+              <button
+                key={label}
+                onClick={() => setActiveTab(label)}
+                className="flex-shrink-0 px-4 py-2 rounded-full text-xs font-medium whitespace-nowrap transition-colors"
+                style={{
+                  backgroundColor: activeTab === label ? "#000" : "#F3F4F6",
+                  color: activeTab === label ? "#fff" : "#000",
+                  outline: "none",
+                }}
+              >
+                {label}
+              </button>
+            ))}
+          </div>
+        </div>
+
+        {/* Cards */}
+        <div className="px-5 py-6 flex flex-col gap-4">
           {CARDS.map((card, i) => {
             const IconComp = ICON_MAP[card.icon];
             return (
-              <div key={i} className="rounded-2xl bg-[#F3F4F6] p-6">
-                <div className="w-12 h-12 mb-4">
-                  <IconComp />
+              <div key={i} className="bg-white rounded-2xl border border-black/8 overflow-hidden">
+                {/* Card header strip */}
+                <div className="bg-[#F3F4F6] px-5 pt-5 pb-4">
+                  <div className="w-14 h-14 bg-white rounded-2xl flex items-center justify-center shadow-sm p-2">
+                    <IconComp />
+                  </div>
                 </div>
-                <h3 className={`text-xl font-medium text-black mb-2 ${styles.mobileFontFamily}`}>
-                  {card.title}
-                </h3>
-                <p className={`text-base text-black leading-relaxed ${styles.mobileFontFamily}`}>
-                  {card.desc}
-                </p>
+                {/* Card body */}
+                <div className="px-5 py-4">
+                  <h3 className="font-bold text-base mb-2 leading-snug" style={{ color: "#000000" }}>
+                    {card.title}
+                  </h3>
+                  <p className="text-sm leading-relaxed" style={{ color: "#000000cc" }}>
+                    {card.desc}
+                  </p>
+                </div>
               </div>
             );
           })}
         </div>
 
-        <div className="flex mt-10 border border-black">
-          <button className={`flex-1 py-4 flex items-center justify-center gap-2 text-base font-medium text-black ${styles.mobileFontFamily}`}>
-            <svg width="20" height="20" viewBox="0 0 40 40" fill="none">
-              <path d="M25 8 L13 20 L25 32" stroke="#000" strokeWidth="3" strokeLinecap="round" strokeLinejoin="round" />
+        {/* Pagination */}
+        <div className="px-5 pb-10 flex gap-3">
+          <button className="flex-1 py-3 rounded-full border border-black/20 flex items-center justify-center gap-2 text-sm font-medium" style={{ color: "#000000" }}>
+            <svg width="16" height="16" viewBox="0 0 40 40" fill="none">
+              <line x1="30" y1="20" x2="10" y2="20" stroke="#000" strokeWidth="2.5" strokeLinecap="round" />
+              <polyline points="18,12 10,20 18,28" stroke="#000" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round" fill="none" />
             </svg>
             Previous
           </button>
-          <button className={`flex-1 py-4 flex items-center justify-center gap-2 text-base font-medium text-black bg-[#F3F4F6] ${styles.mobileFontFamily}`}>
+          <button className="flex-1 py-3 rounded-full bg-black flex items-center justify-center gap-2 text-sm font-medium text-white">
             Next
-            <svg width="20" height="20" viewBox="0 0 40 40" fill="none">
-              <path d="M15 8 L27 20 L15 32" stroke="#000" strokeWidth="3" strokeLinecap="round" strokeLinejoin="round" />
+            <svg width="16" height="16" viewBox="0 0 40 40" fill="none">
+              <line x1="10" y1="20" x2="30" y2="20" stroke="#fff" strokeWidth="2.5" strokeLinecap="round" />
+              <polyline points="22,12 30,20 22,28" stroke="#fff" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round" fill="none" />
             </svg>
           </button>
         </div>
+
       </section>
     </>
   );

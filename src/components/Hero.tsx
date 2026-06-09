@@ -10,23 +10,35 @@ export default function Hero() {
       <Image src="/images/hero-bg.webp" alt="RohaTech Hero Background" fill sizes="100vw" className="object-cover object-center" priority />
       <div className={`absolute inset-0 ${styles.mobileGradient}`} />
 
-      <div className="absolute bottom-0 left-0 right-0 px-5 pb-10 z-10">
-        <h1 className={`text-white font-normal uppercase leading-tight mb-4 ${styles.mobileHeading}`}>
-          Transforming Ideas into Digital Reality
+      <div className="absolute bottom-0 left-0 right-0 z-10 px-6 pb-12 flex flex-col gap-5">
+
+        {/* Label */}
+        <p className="text-white/60 text-xs uppercase tracking-widest font-medium">Best IT Solutions Company</p>
+
+        {/* Headline */}
+        <h1 className={`text-white font-normal uppercase leading-none ${styles.mobileHeading}`}>
+          Transforming<br />Ideas into<br />Digital Reality
         </h1>
-        <p className="text-white/80 text-sm leading-relaxed mb-6">
+
+        {/* Divider */}
+        <div className="w-10 h-px bg-white/30" />
+
+        {/* Description */}
+        <p className="text-white/70 text-sm leading-relaxed max-w-xs">
           We build smart, scalable solutions that boost efficiency and give you a competitive edge.
         </p>
 
-        <div className="flex items-end gap-3 mb-2">
-          <Link href="/services" className="flex-shrink-0 bg-white text-black font-medium text-sm px-5 py-3 rounded-full">
+        {/* CTA row */}
+        <div className="flex items-center gap-4">
+          <Link href="/services" className="bg-white text-black font-medium text-sm px-6 py-3 rounded-full hover:bg-white/90 transition-colors">
             Learn More
           </Link>
-          <div className="bg-white/10 backdrop-blur-sm border border-white/20 rounded-2xl px-4 py-3 flex-1">
-            <span className="text-[#78EB54] text-3xl font-semibold leading-none">100+</span>
-            <p className="text-white text-xs mt-1 leading-snug">Digital Infrastructure Projects Delivered</p>
+          <div className="flex flex-col">
+            <span className="text-[#78EB54] text-2xl font-semibold leading-none">100+</span>
+            <span className="text-white/60 text-[10px] leading-tight mt-1">Projects Delivered</span>
           </div>
         </div>
+
       </div>
     </section>
 

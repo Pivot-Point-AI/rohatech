@@ -101,89 +101,163 @@ export default function ServicesContent() {
 
   return (
     <>
-    <section className="services-section">
-      {/* ── Hero text ── */}
-      <h1 className="services-heading">Services</h1>
-      <p className="services-subtitle">
-        Delivering scalable digital solutions designed to empower businesses, optimize operations, and drive sustainable growth.
-      </p>
+    {/* ── MOBILE (< lg) ── */}
+    <section className="block lg:hidden bg-white">
 
-      {/* ── Tab pills ── */}
-      <div className="services-tabnav">
+      {/* Dark hero header */}
+      <div className="bg-black px-6 pt-10 pb-10">
+        <p className="text-[10px] uppercase tracking-[0.2em] mb-3" style={{ color: "rgba(255,255,255,0.5)" }}>What We Offer</p>
+        <h1 className="font-bold text-3xl leading-tight mb-3" style={{ color: "#ffffff", letterSpacing: "-0.02em" }}>Services</h1>
+        <p className="text-sm leading-relaxed" style={{ color: "rgba(255,255,255,0.6)" }}>
+          Delivering scalable digital solutions designed to empower businesses, optimize operations, and drive sustainable growth.
+        </p>
+      </div>
+
+      {/* Tab pills */}
+      <div className="px-5 py-5 border-b border-black/8 flex flex-col gap-3">
         <button
-          className={`services-tab-pill ${activeTab === "dts" ? "services-tab-pill--active" : "services-tab-pill--inactive"}`}
           onClick={() => setActiveTab("dts")}
+          className="w-full py-3 rounded-full text-sm font-medium transition-colors"
+          style={{ background: activeTab === "dts" ? "#000" : "#F3F4F6", color: activeTab === "dts" ? "#fff" : "#000" }}
         >
           Digital Technology Services (DTS)
         </button>
         <button
-          className={`services-tab-pill ${activeTab === "dis" ? "services-tab-pill--active" : "services-tab-pill--inactive"}`}
           onClick={() => setActiveTab("dis")}
+          className="w-full py-3 rounded-full text-sm font-medium transition-colors"
+          style={{ background: activeTab === "dis" ? "#000" : "#F3F4F6", color: activeTab === "dis" ? "#fff" : "#000" }}
         >
           Digital Infrastructure Services (DIS)
         </button>
       </div>
 
-      {/* ── Service rows ── */}
-      <div className="services-rows">
+      {/* Service cards */}
+      <div className="px-5 py-6 flex flex-col gap-5">
         {dtServices.map((svc) => (
-          <div key={svc.num} id={slugify(svc.title)} className="services-row">
-
-            {/* Left — number + title + description */}
-            <div className="services-row__left">
-              <div className={`services-row__badge ${svc.filled ? "services-row__badge--filled" : "services-row__badge--outline"}`}>
-                {svc.num}
-              </div>
-              <h2 className="services-row__title">{svc.title}</h2>
-              <p className="services-row__desc">{svc.description}</p>
-            </div>
-
-            {/* Center — image */}
+          <div key={svc.num} id={slugify(svc.title)} className="bg-white rounded-2xl border border-black/8 overflow-hidden">
+            {/* Image */}
             {/* eslint-disable-next-line @next/next/no-img-element */}
-            <img
-              src={svc.image}
-              alt={svc.title}
-              className="services-row__image"
-            />
+            <img src={svc.image} alt={svc.title} className="w-full h-48 object-cover" />
 
-            {/* Connector line + dot */}
-            <div className="services-row__connector" aria-hidden="true">
-              <div className="services-row__line" />
-              <div className="services-row__dot" />
-            </div>
+            {/* Body */}
+            <div className="p-5">
+              <div className="flex items-center gap-3 mb-3">
+                <div
+                  className="w-9 h-9 rounded-full flex items-center justify-center text-sm font-bold flex-shrink-0"
+                  style={{ background: svc.filled ? "#78EB54" : "transparent", color: "#000", border: svc.filled ? "none" : "2px solid #78EB54" }}
+                >
+                  {svc.num}
+                </div>
+                <h2 className="font-bold text-base leading-snug" style={{ color: "#000000" }}>{svc.title}</h2>
+              </div>
+              <p className="text-sm leading-relaxed mb-4" style={{ color: "#00000099" }}>{svc.description}</p>
 
-            {/* Right — title + bullet list */}
-            <div className="services-row__right">
-              <h3 className="services-row__right-title">{svc.rightTitle}</h3>
-              <ul className="services-row__list">
-                {svc.rightItems.map((item) => (
-                  <li key={item}>{item}</li>
-                ))}
-              </ul>
+              {/* Bullet list */}
+              <div className="border-t border-black/8 pt-4">
+                <p className="text-xs font-semibold uppercase tracking-wide mb-3" style={{ color: "#000000" }}>{svc.rightTitle}</p>
+                <ul className="flex flex-col gap-2">
+                  {svc.rightItems.map((item) => (
+                    <li key={item} className="flex items-start gap-2 text-sm" style={{ color: "#000000cc" }}>
+                      <span className="w-1.5 h-1.5 rounded-full bg-[#78EB54] flex-shrink-0 mt-1.5" />
+                      {item}
+                    </li>
+                  ))}
+                </ul>
+              </div>
             </div>
           </div>
         ))}
       </div>
+
+      {/* Pagination */}
+      <div className="px-5 pb-10 flex gap-3">
+        <button className="flex-1 py-3 rounded-full border border-black/20 flex items-center justify-center gap-2 text-sm font-medium" style={{ color: "#000" }}>
+          <svg width="16" height="16" viewBox="0 0 36 36" fill="none">
+            <line x1="28" y1="18" x2="8" y2="18" stroke="#000" strokeWidth="2" strokeLinecap="round"/>
+            <polyline points="16,10 8,18 16,26" stroke="#000" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" fill="none"/>
+          </svg>
+          Previous
+        </button>
+        <button className="flex-1 py-3 rounded-full bg-black flex items-center justify-center gap-2 text-sm font-medium text-white">
+          Next
+          <svg width="16" height="16" viewBox="0 0 36 36" fill="none">
+            <line x1="8" y1="18" x2="28" y2="18" stroke="#fff" strokeWidth="2" strokeLinecap="round"/>
+            <polyline points="20,10 28,18 20,26" stroke="#fff" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" fill="none"/>
+          </svg>
+        </button>
+      </div>
+
     </section>
-<br/>
-<br />
-    {/* ── Pagination ── */}
-    <div className="services-pagination">
-      <button className="services-pagination__prev">
-        <svg className="services-pagination__arrow" viewBox="0 0 36 36" fill="none" aria-hidden="true">
-          <line x1="28" y1="18" x2="8" y2="18" stroke="black" strokeWidth="2" strokeLinecap="round" />
-          <polyline points="16,10 8,18 16,26" stroke="black" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" fill="none" />
-        </svg>
-        Previous
-      </button>
-      <button className="services-pagination__next">
-        Next
-        <svg className="services-pagination__arrow" viewBox="0 0 36 36" fill="none" aria-hidden="true">
-          <line x1="8" y1="18" x2="28" y2="18" stroke="black" strokeWidth="2" strokeLinecap="round" />
-          <polyline points="20,10 28,18 20,26" stroke="black" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" fill="none" />
-        </svg>
-      </button>
+
+    {/* ── DESKTOP (lg+) ── */}
+    <div className="hidden lg:block">
+      <section className="services-section">
+        <h1 className="services-heading">Services</h1>
+        <p className="services-subtitle">
+          Delivering scalable digital solutions designed to empower businesses, optimize operations, and drive sustainable growth.
+        </p>
+
+        <div className="services-tabnav">
+          <button
+            className={`services-tab-pill ${activeTab === "dts" ? "services-tab-pill--active" : "services-tab-pill--inactive"}`}
+            onClick={() => setActiveTab("dts")}
+          >
+            Digital Technology Services (DTS)
+          </button>
+          <button
+            className={`services-tab-pill ${activeTab === "dis" ? "services-tab-pill--active" : "services-tab-pill--inactive"}`}
+            onClick={() => setActiveTab("dis")}
+          >
+            Digital Infrastructure Services (DIS)
+          </button>
+        </div>
+
+        <div className="services-rows">
+          {dtServices.map((svc) => (
+            <div key={svc.num} id={slugify(svc.title)} className="services-row">
+              <div className="services-row__left">
+                <div className={`services-row__badge ${svc.filled ? "services-row__badge--filled" : "services-row__badge--outline"}`}>
+                  {svc.num}
+                </div>
+                <h2 className="services-row__title">{svc.title}</h2>
+                <p className="services-row__desc">{svc.description}</p>
+              </div>
+              {/* eslint-disable-next-line @next/next/no-img-element */}
+              <img src={svc.image} alt={svc.title} className="services-row__image" />
+              <div className="services-row__connector" aria-hidden="true">
+                <div className="services-row__line" />
+                <div className="services-row__dot" />
+              </div>
+              <div className="services-row__right">
+                <h3 className="services-row__right-title">{svc.rightTitle}</h3>
+                <ul className="services-row__list">
+                  {svc.rightItems.map((item) => (
+                    <li key={item}>{item}</li>
+                  ))}
+                </ul>
+              </div>
+            </div>
+          ))}
+        </div>
+      </section>
+      <br/><br/>
+      <div className="services-pagination">
+        <button className="services-pagination__prev">
+          <svg className="services-pagination__arrow" viewBox="0 0 36 36" fill="none" aria-hidden="true">
+            <line x1="28" y1="18" x2="8" y2="18" stroke="black" strokeWidth="2" strokeLinecap="round" />
+            <polyline points="16,10 8,18 16,26" stroke="black" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" fill="none" />
+          </svg>
+          Previous
+        </button>
+        <button className="services-pagination__next">
+          Next
+          <svg className="services-pagination__arrow" viewBox="0 0 36 36" fill="none" aria-hidden="true">
+            <line x1="8" y1="18" x2="28" y2="18" stroke="black" strokeWidth="2" strokeLinecap="round" />
+            <polyline points="20,10 28,18 20,26" stroke="black" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" fill="none" />
+          </svg>
+        </button>
+      </div>
     </div>
-    </>
+</>
   );
 }

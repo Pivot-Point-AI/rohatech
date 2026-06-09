@@ -43,38 +43,41 @@ export default function AboutWhatWeDo() {
   return (
     <>
     {/* ── MOBILE ── */}
-    <section className="block md:hidden bg-white px-5 py-12">
-      <div className={`relative rounded-3xl overflow-hidden mb-8 ${styles.mobileCardWrapper}`}>
+    <section className="block md:hidden bg-[#F3F4F6]">
+
+      {/* Image card with dark overlay */}
+      <div className="relative overflow-hidden mx-5 mt-6 rounded-3xl" style={{ minHeight: "320px" }}>
         <Image src="/images/about-whatwedo-bg.webp" alt="" fill sizes="100vw" className="object-cover object-center" aria-hidden="true" />
-        <div className={`absolute inset-0 ${styles.mobileGradient}`} />
-        <div className="relative z-10 p-6">
-          <h2 className="text-2xl font-normal text-black leading-snug mb-3">Seamless &amp; Hassle-Free IT Support</h2>
-          <p className="text-sm text-black leading-relaxed mb-5">With a team of over 220+ skilled experts, RohaTech takes pride in exceeding client expectations. Since our inception in 2015, we have successfully developed and deployed over 100 solutions globally.</p>
-          <Link href="#contact" className="inline-flex items-center justify-center bg-black text-white text-sm font-medium px-6 py-3 rounded-full">Contact Us</Link>
+        <div className="absolute inset-0" style={{ background: "linear-gradient(to top, rgba(0,0,0,0.92) 0%, rgba(0,0,0,0.55) 50%, rgba(0,0,0,0.1) 100%)" }} />
+        <div className="absolute bottom-0 left-0 right-0 p-6 flex flex-col gap-3">
+          <div className="w-7 h-[2px] bg-[#78EB54] rounded-full" />
+          <h2 className="font-bold text-2xl leading-tight" style={{ color: "#ffffff", letterSpacing: "-0.02em" }}>Seamless &amp; Hassle-Free IT Support</h2>
+          <p className="text-xs leading-relaxed" style={{ color: "rgba(255,255,255,0.65)" }}>With 220+ skilled experts, RohaTech takes pride in exceeding client expectations — 100+ solutions deployed globally since 2015.</p>
+          <Link href="/contact" className="self-start inline-flex items-center justify-center bg-[#78EB54] hover:bg-[#60d43e] transition-colors text-white text-sm font-medium px-6 py-2.5 rounded-full">
+            Contact Us
+          </Link>
         </div>
       </div>
 
-      <div className="flex flex-col gap-3">
+      {/* FAQ accordion */}
+      <div className="px-5 pt-6 pb-10 flex flex-col gap-3">
+        <p className="text-[10px] uppercase tracking-[0.2em] mb-1" style={{ color: "#00000055" }}>FAQs</p>
         {faqs.map((faq, i) => {
           const isOpen = mobileOpen === i;
           return (
-            <div
-              key={faq.q}
-              className="rounded-2xl border border-black/10 overflow-hidden bg-white/60"
-              style={{ backdropFilter: "blur(10px)" }}
-            >
+            <div key={faq.q} className="bg-white rounded-2xl overflow-hidden border border-black/8">
               <button
                 className="w-full flex items-center justify-between px-5 py-4 text-left"
                 onClick={() => setMobileOpen(isOpen ? -1 : i)}
               >
-                <span className="text-sm font-medium text-black pr-4">{faq.q}</span>
+                <span className="text-sm font-semibold pr-4 leading-snug" style={{ color: "#000000" }}>{faq.q}</span>
                 <span
-                  className={`text-xl text-black flex-shrink-0 ${styles.mobileFaqToggle}`}
-                  style={{ transform: isOpen ? "rotate(45deg)" : "none" }}
+                  className={`w-6 h-6 rounded-full flex items-center justify-center flex-shrink-0 text-sm font-bold ${styles.mobileFaqToggle}`}
+                  style={{ background: isOpen ? "#000" : "#F3F4F6", color: isOpen ? "#fff" : "#000", transform: isOpen ? "rotate(45deg)" : "none" }}
                 >+</span>
               </button>
               {isOpen && (
-                <p className="text-sm text-black leading-relaxed px-5 pb-4">{faq.a}</p>
+                <p className="text-xs leading-relaxed px-5 pb-5" style={{ color: "#000000aa" }}>{faq.a}</p>
               )}
             </div>
           );
@@ -111,7 +114,7 @@ export default function AboutWhatWeDo() {
         </p>
 
         <Link
-          href="#contact"
+          href="/contact"
           className={`absolute bg-black flex items-center justify-center hover:bg-black/80 transition-colors ${styles.contactBtn}`}
         >
           <span className={`text-white ${styles.contactBtnText}`}>

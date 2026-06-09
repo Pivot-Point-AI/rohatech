@@ -73,10 +73,10 @@ body {
   100% { transform: translateX(-295.833vw); }
 }
 
-/* Gallery carousel — shifts by exactly half the track (one set), works for any N images */
+/* Gallery carousel — 4 cards × 27.292vw + 4 gaps × 2.292vw = 118.336vw per set */
 @keyframes scroll-gallery {
   0%   { transform: translateX(0); }
-  100% { transform: translateX(-50%); }
+  100% { transform: translateX(-118.336vw); }
 }
 
 /* ── IT Solutions — mobile only (desktop unchanged) ── */

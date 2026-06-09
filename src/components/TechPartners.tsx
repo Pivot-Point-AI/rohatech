@@ -16,12 +16,12 @@ export default function TechPartners() {
     <>
     {/* ── MOBILE ── */}
     <section id="technologies" className="block md:hidden bg-black px-5 py-14 text-center">
-      <span className="inline-block px-5 py-2 rounded-full border border-white/20 bg-white/10 text-white text-sm mb-5">Collaborations</span>
+      <span className="inline-block px-5 py-2 rounded-full border border-white/20 bg-white/10 text-white text-xs tracking-widest uppercase mb-5">Collaborations</span>
       <h2 className="text-white font-bold uppercase text-2xl mb-10">Technology Partners</h2>
-      <div className="flex flex-wrap justify-center gap-4">
+      <div className="grid grid-cols-3 gap-5 max-w-xs mx-auto [&>*:last-child]:col-start-2">
         {circles.map(({ imgSrc, imgW, imgH, xOffset }) => (
-          <div key={xOffset} className="w-16 h-16 rounded-full bg-[#181818] flex items-center justify-center">
-            <Image src={imgSrc} alt="Partner" width={imgW} height={imgH} className="object-contain w-10 h-10" />
+          <div key={xOffset} className="w-20 h-20 rounded-full flex items-center justify-center mx-auto">
+            <Image src={imgSrc} alt="Partner" width={imgW} height={imgH} className="object-contain w-14 h-14" />
           </div>
         ))}
       </div>

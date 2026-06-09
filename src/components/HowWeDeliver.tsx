@@ -14,18 +14,25 @@ export default function HowWeDeliver() {
     <>
     {/* ── MOBILE ── */}
     <section className="block md:hidden bg-[#F3F4F6] px-5 py-14">
-      <div className="bg-black rounded-2xl p-6 mb-5">
-        <h2 className="text-white text-2xl font-bold mb-4">How RohaTech Delivers</h2>
-        <Link href="/services" className="inline-flex items-center gap-2 bg-[#78EB54] text-white text-sm font-bold px-5 py-2.5 rounded-full">See More ↗</Link>
+      <div className="bg-black rounded-2xl p-6 mb-6">
+        <h2 className="text-white text-2xl font-bold mb-5">How RohaTech Delivers</h2>
+        <Link href="/services" className="inline-flex items-center gap-2 bg-[#78EB54] hover:bg-[#60d43e] transition-colors text-white text-sm font-bold px-5 py-2.5 rounded-full">
+          See More
+          <svg viewBox="0 0 25 24" fill="none" className="w-4 h-4" aria-hidden="true">
+            <path d="M6.5 17.5L18.5 5.5M18.5 5.5H11M18.5 5.5V13" stroke="white" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
+          </svg>
+        </Link>
       </div>
       <div className="flex flex-col gap-4">
         {steps.map(({ title, img, desc }) => (
-          <div key={title} className="bg-white rounded-2xl p-5">
-            <div className="w-10 h-10 mb-3">
-              <Image src={img} alt={title} width={40} height={40} className="object-contain w-full h-full" />
+          <div key={title} className="bg-white rounded-2xl p-5 flex gap-4 items-start">
+            <div className="w-12 h-12 bg-[#F3F4F6] rounded-xl flex items-center justify-center flex-shrink-0">
+              <Image src={img} alt={title} width={32} height={32} className="object-contain w-8 h-8" />
             </div>
-            <p className="text-black font-bold text-sm mb-2">{title}</p>
-            <p className="text-black text-xs leading-relaxed">{desc}</p>
+            <div>
+              <p className="font-bold text-sm mb-1" style={{ color: "#000000" }}>{title}</p>
+              <p className="text-xs leading-relaxed" style={{ color: "#00000099" }}>{desc}</p>
+            </div>
           </div>
         ))}
       </div>
