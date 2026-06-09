@@ -120,16 +120,40 @@
   padding-top: 0.521vw;
   font-size: 0.625vw;
   border: none;
+  color: #717171;
 }
 
 .submitBtn {
   left: 4.938%;
-  top: 85.827%;
+  top: 83%;
   width: 28.148%;
   height: 8.819%;
   border-radius: 9999px;
   font-size: 0.833vw;
   font-weight: 400;
+}
+
+.statusMsg {
+  left: 4.938%;
+  top: 93.5%;
+  font-size: 0.729vw;
+  line-height: 1vw;
+}
+
+/* Override browser autofill background and text color */
+.inputName:-webkit-autofill,
+.inputName:-webkit-autofill:hover,
+.inputName:-webkit-autofill:focus,
+.inputPhone:-webkit-autofill,
+.inputPhone:-webkit-autofill:hover,
+.inputPhone:-webkit-autofill:focus,
+.inputEmail:-webkit-autofill,
+.inputEmail:-webkit-autofill:hover,
+.inputEmail:-webkit-autofill:focus {
+  -webkit-text-fill-color: #717171;
+  -webkit-box-shadow: 0 0 0px 1000px white inset;
+  transition: background-color 5000s ease-in-out 0s;
+  caret-color: #717171;
 }
 
 .infoCard {

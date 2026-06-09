@@ -7,7 +7,7 @@ export default function Hero() {
     <>
     {/* ── MOBILE ── */}
     <section className={`block md:hidden relative w-full overflow-hidden bg-black ${styles.mobileSection}`}>
-      <Image src="/images/hero-bg.png" alt="RohaTech Hero Background" fill sizes="100vw" className="object-cover object-center" priority />
+      <Image src="/images/hero-bg.webp" alt="RohaTech Hero Background" fill sizes="100vw" className="object-cover object-center" priority />
       <div className={`absolute inset-0 ${styles.mobileGradient}`} />
 
       <div className="absolute bottom-0 left-0 right-0 px-5 pb-10 z-10">
@@ -33,7 +33,7 @@ export default function Hero() {
     {/* ── DESKTOP ── */}
     <section className={`hidden md:block relative w-full overflow-hidden bg-black ${styles.desktopSection}`}>
       <Image
-        src="/images/hero-bg.png"
+        src="/images/hero-bg.webp"
         alt="RohaTech Hero Background"
         fill
         sizes="100vw"

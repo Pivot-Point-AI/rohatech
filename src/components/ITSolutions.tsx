@@ -7,7 +7,7 @@ export default function ITSolutions() {
     <section className={`relative w-full overflow-hidden ${styles.section}`}>
       {/* Background image */}
       <Image
-        src="/images/it-solutions-bg.png"
+        src="/images/it-solutions-bg.webp"
         alt="IT Solutions Provider"
         fill
         sizes="100vw"

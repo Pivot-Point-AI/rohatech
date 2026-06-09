@@ -17,7 +17,7 @@ export default function AboutHero() {
 
       <div className={`relative w-full overflow-hidden ${styles.mobileHeroWrapper}`}>
         <Image
-          src="/images/about-hero-bg.png"
+          src="/images/about-hero-bg.webp"
           alt=""
           fill
           sizes="100vw"
@@ -40,7 +40,7 @@ export default function AboutHero() {
 
       <div className="px-5 mt-6">
         <div className={`relative w-full rounded-2xl overflow-hidden shadow-md ${styles.mobileVideoWrapper}`}>
-          <Image src="/images/abou.png" alt="RohaTech showcase" fill sizes="100vw" className="object-cover" />
+          <Image src="/images/abou.webp" alt="RohaTech showcase" fill sizes="100vw" className="object-cover" />
           <div className="absolute inset-0 flex items-center justify-center">
             <div className="w-14 h-14 rounded-full bg-white/90 flex items-center justify-center shadow-lg">
               <svg viewBox="0 0 60 60" width="36" height="36">
@@ -82,7 +82,7 @@ export default function AboutHero() {
       {/* Background image wrapper */}
       <div className={`absolute left-0 right-0 overflow-hidden ${styles.bgWrapper}`}>
         <Image
-          src="/images/about-hero-bg.png"
+          src="/images/about-hero-bg.webp"
           alt=""
           fill
           sizes="100vw"
@@ -104,7 +104,7 @@ export default function AboutHero() {
       {/* Video thumbnail */}
       <div className={`absolute left-1/2 -translate-x-1/2 overflow-hidden ${styles.videoWrapper}`}>
         <Image
-          src="/images/abou.png"
+          src="/images/abou.webp"
           alt="RohaTech showcase"
           fill
           sizes="30vw"

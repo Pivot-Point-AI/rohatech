@@ -45,7 +45,7 @@ export default function AboutWhatWeDo() {
     {/* ── MOBILE ── */}
     <section className="block md:hidden bg-white px-5 py-12">
       <div className={`relative rounded-3xl overflow-hidden mb-8 ${styles.mobileCardWrapper}`}>
-        <Image src="/images/about-whatwedo-bg.png" alt="" fill sizes="100vw" className="object-cover object-center" aria-hidden="true" />
+        <Image src="/images/about-whatwedo-bg.webp" alt="" fill sizes="100vw" className="object-cover object-center" aria-hidden="true" />
         <div className={`absolute inset-0 ${styles.mobileGradient}`} />
         <div className="relative z-10 p-6">
           <h2 className="text-2xl font-normal text-black leading-snug mb-3">Seamless &amp; Hassle-Free IT Support</h2>
@@ -88,7 +88,7 @@ export default function AboutWhatWeDo() {
       {/* Image frame */}
       <div className={`absolute overflow-hidden ${styles.imageFrame}`}>
         <Image
-          src="/images/about-whatwedo-bg.png"
+          src="/images/about-whatwedo-bg.webp"
           alt=""
           fill
           sizes="90vw"

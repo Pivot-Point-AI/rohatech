@@ -32,7 +32,7 @@ export default function Footer() {
       {/* Bg image */}
       {/* eslint-disable-next-line @next/next/no-img-element */}
       <img
-        src="/images/footer.png"
+        src="/images/footer.webp"
         alt=""
         aria-hidden="true"
         className={styles.footerBg}

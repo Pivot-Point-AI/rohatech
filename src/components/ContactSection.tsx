@@ -171,12 +171,12 @@ export default function ContactSection() {
         </button>
 
         {status === "success" && (
-          <p className="absolute text-sm text-green-600" style={{ bottom: "1.5vw", left: "2.5vw" }}>
+          <p className={`absolute text-green-600 ${styles.statusMsg}`}>
             Thanks! Your message has been sent.
           </p>
         )}
         {status === "error" && (
-          <p className="absolute text-sm text-red-600" style={{ bottom: "1.5vw", left: "2.5vw" }}>
+          <p className={`absolute text-red-600 ${styles.statusMsg}`}>
             Something went wrong. Please try again.
           </p>
         )}

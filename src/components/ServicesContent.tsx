@@ -20,7 +20,7 @@ const dtServices = [
     title: "Digital Marketing",
     description:
       "Enhance your brand's online presence with data-driven marketing strategies designed to increase visibility, engagement, and measurable business growth.",
-    image: "/images/services/hero-bg.png",
+    image: "/images/services/hero-bg.webp",
     rightTitle: "Digital Marketing Services",
     rightItems: [
       "Search Engine Optimization (SEO)",
@@ -36,7 +36,7 @@ const dtServices = [
     title: "Application Modernization",
     description:
       "Modernize legacy systems to improve performance, scalability, and security using modern architectures, frameworks, and cloud technologies.",
-    image: "/images/services/it-solutions-bg.png",
+    image: "/images/services/it-solutions-bg.webp",
     rightTitle: "App Modernization Services",
     rightItems: [
       "Legacy System Modernization",
@@ -52,7 +52,7 @@ const dtServices = [
     title: "Application Integration",
     description:
       "Streamline and connect diverse systems to create efficient, cost-effective, and fully integrated IT ecosystems.",
-    image: "/images/services/about-hero-bg.png",
+    image: "/images/services/about-hero-bg.webp",
     rightTitle: "App Integration Services",
     rightItems: [
       "System Connectivity & Middleware",
@@ -68,7 +68,7 @@ const dtServices = [
     title: "UI/UX Design",
     description:
       "Create intuitive and engaging digital experiences that enhance usability, improve customer satisfaction, and strengthen your brand identity.",
-    image: "/images/services/abou.png",
+    image: "/images/services/abou.webp",
     rightTitle: "UI/UX Design Services",
     rightItems: [
       "User Interface Design",
@@ -84,7 +84,7 @@ const dtServices = [
     title: "Web & Full Stack",
     description:
       "Develop secure, scalable, and high-performance digital platforms tailored to meet evolving business needs.",
-    image: "/images/services/hero2-bg.png",
+    image: "/images/services/hero2-bg.webp",
     rightTitle: "Web & Full Stack Services",
     rightItems: [
       "Web & Full Stack Development",

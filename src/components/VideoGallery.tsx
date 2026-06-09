@@ -2,10 +2,10 @@ import Image from "next/image";
 import styles from "./VideoGallery.module.css";
 
 const images = [
-  "/images/gallery/gallery1.png",
-  "/images/gallery/gallery2.png",
-  "/images/gallery/gallery3.png",
-  "/images/gallery/gallery4.png",
+  "/images/gallery/gallery1.webp",
+  "/images/gallery/gallery2.webp",
+  "/images/gallery/gallery3.webp",
+  "/images/gallery/gallery4.webp",
 ];
 
 export default function VideoGallery() {
