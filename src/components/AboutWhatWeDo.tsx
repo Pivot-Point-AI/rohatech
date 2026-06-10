@@ -52,7 +52,7 @@ export default function AboutWhatWeDo() {
         <div className="absolute bottom-0 left-0 right-0 p-6 flex flex-col gap-3">
           <div className="w-7 h-[2px] bg-[#78EB54] rounded-full" />
           <h2 className="font-bold text-2xl leading-tight" style={{ color: "#ffffff", letterSpacing: "-0.02em" }}>Seamless &amp; Hassle-Free IT Support</h2>
-          <p className="text-xs leading-relaxed" style={{ color: "rgba(255,255,255,0.65)" }}>With 220+ skilled experts, RohaTech takes pride in exceeding client expectations  100+ solutions deployed globally since 2015.</p>
+          <p className="text-xs leading-relaxed" style={{ color: "rgba(255,255,255,0.65)" }}>With 220+ skilled experts, RohaTech takes pride in exceeding client expectations 100+ solutions deployed globally since 2015.</p>
           <Link href="/contact" className="self-start inline-flex items-center justify-center bg-[#78EB54] hover:bg-[#60d43e] transition-colors text-white text-sm font-medium px-6 py-2.5 rounded-full">
             Contact Us
           </Link>

@@ -233,7 +233,7 @@ export default function SolutionsSection() {
 
         {/* Cards */}
         <div className="px-5 py-6 flex flex-col gap-4">
-          {CARDS.map((card, i) => {
+          {CARDS.filter((card, i) => CARDS.findIndex((c) => c.title === card.title) === i).map((card, i) => {
             const IconComp = ICON_MAP[card.icon];
             return (
               <div key={i} className="bg-white rounded-2xl border border-black/8 overflow-hidden">

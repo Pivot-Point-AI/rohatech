@@ -139,7 +139,7 @@ export default function AboutHero() {
 
       {/* Description */}
       <p className={`absolute text-white font-normal ${styles.visionDesc}`}>
-        Our vision is built upon the foundation of our core values — placing customers and employees
+        Our vision is built upon the foundation of our core values  placing customers and employees
         at the heart of everything we do. We are committed to being reliable, dependable, disciplined,
         and diligent. We believe that team spirit and collaboration are the driving forces that can
         improve lives and shape a better future for generations to come.
