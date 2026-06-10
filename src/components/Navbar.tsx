@@ -186,7 +186,7 @@ export default function Navbar({ theme = "dark" }: { theme?: "dark" | "light" })
       </nav>
 
       {/* Mobile bar */}
-      <div className={`lg:hidden flex items-center justify-between px-6 h-14 mt-2 ${scrolled ? (isDark ? "bg-black/80 backdrop-blur-md" : "bg-white/90 backdrop-blur-md") : "bg-transparent"}`}>
+      <div className={`lg:hidden flex items-center justify-between px-6 h-14 ${isDark ? "bg-black/80 backdrop-blur-md" : "bg-white/90 backdrop-blur-md"}`}>
         <Link href="/" className="flex items-center">
           <Image
             src={isDark ? "/images/logowhite.png" : "/images/rohatech.png"}
