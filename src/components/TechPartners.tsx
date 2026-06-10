@@ -15,16 +15,15 @@ export default function TechPartners() {
   return (
     <>
     {/* ── MOBILE ── */}
-    <section id="technologies" className="relative block md:hidden bg-black px-5 py-14 text-center overflow-hidden">
+    <section id="technologies" className="relative block md:hidden w-full bg-black px-5 py-14 text-center overflow-hidden">
       <svg
         className="absolute inset-0 w-full h-full pointer-events-none"
         viewBox="0 0 400 600"
-        preserveAspectRatio="xMidYMid slice"
+        preserveAspectRatio="xMidYMid meet"
         aria-hidden="true"
       >
-        <circle cx="200" cy="300" r="120" fill="none" stroke="rgba(255,255,255,0.2)" strokeWidth="1"/>
-        <circle cx="200" cy="300" r="200" fill="none" stroke="rgba(255,255,255,0.4)" strokeWidth="1"/>
-        <circle cx="200" cy="300" r="280" fill="none" stroke="rgba(255,255,255,0.6)" strokeWidth="1"/>
+        <circle cx="200" cy="300" r="160" fill="none" stroke="rgba(255,255,255,0.4)" strokeWidth="1"/>
+        <circle cx="200" cy="300" r="195" fill="none" stroke="rgba(255,255,255,0.25)" strokeWidth="1"/>
       </svg>
 
       <span className="relative inline-block px-5 py-2 rounded-full border border-white/20 bg-white/10 text-white text-xs tracking-widest uppercase mb-5">Collaborations</span>
