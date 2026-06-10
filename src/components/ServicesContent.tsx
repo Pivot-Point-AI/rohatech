@@ -105,10 +105,11 @@ export default function ServicesContent() {
     <section className="block lg:hidden bg-white">
 
       {/* Dark hero header */}
-      <div className="bg-black px-6 pt-10 pb-10">
+      <div className="bg-black px-6 pt-16 pb-12 rounded-b-3xl">
+        <div className="w-8 h-[3px] bg-[#78EB54] rounded-full mb-4" />
         <p className="text-[10px] uppercase tracking-[0.2em] mb-3" style={{ color: "rgba(255,255,255,0.5)" }}>What We Offer</p>
-        <h1 className="font-bold text-3xl leading-tight mb-3" style={{ color: "#ffffff", letterSpacing: "-0.02em" }}>Services</h1>
-        <p className="text-sm leading-relaxed" style={{ color: "rgba(255,255,255,0.6)" }}>
+        <h1 className="font-bold text-[34px] leading-[1.15] mb-3" style={{ color: "#ffffff", letterSpacing: "-0.02em" }}>Services</h1>
+        <p className="text-sm leading-relaxed max-w-[90%]" style={{ color: "rgba(255,255,255,0.6)" }}>
           Delivering scalable digital solutions designed to empower businesses, optimize operations, and drive sustainable growth.
         </p>
       </div>

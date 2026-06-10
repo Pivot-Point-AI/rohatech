@@ -64,12 +64,13 @@ export default function ContactSection() {
     <section className="block md:hidden bg-white">
 
       {/* Hero header */}
-      <div className="bg-black px-6 pt-10 pb-10">
+      <div className="bg-black px-6 pt-16 pb-12 rounded-b-3xl">
+        <div className="w-8 h-[3px] bg-[#78EB54] rounded-full mb-4" />
         <p className="text-white/50 text-[10px] uppercase tracking-[0.2em] mb-3">Get In Touch</p>
-        <h1 className="text-white font-bold text-3xl leading-tight mb-3" style={{ letterSpacing: "-0.02em" }}>
+        <h1 className="text-white font-bold text-[34px] leading-[1.15] mb-3" style={{ letterSpacing: "-0.02em" }}>
           Contact Us
         </h1>
-        <p className="text-white/60 text-sm leading-relaxed">
+        <p className="text-white/60 text-sm leading-relaxed max-w-[90%]">
           Reach us via phone, email, or the form below — we&apos;re here to help.
         </p>
 
