@@ -225,7 +225,7 @@ body {
   height: 15.573vw;       /* 299/1920 */
   overflow: hidden;
   flex-shrink: 0;
-  scroll-margin-top: 6rem;
+  scroll-margin-top: 7vw;
 }
 
 /* Left block — left=120, w=441-492 */

@@ -1,10 +1,17 @@
 "use client";
 
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import Image from "next/image";
 
 const slugify = (title: string) =>
   title.toLowerCase().replace(/&/g, "and").replace(/[^a-z0-9]+/g, "-").replace(/(^-|-$)/g, "");
+
+export const scrollToService = (slug: string) => {
+  const desktop = document.getElementById(slug);
+  const mobile = document.getElementById(`${slug}-m`);
+  const target = desktop && desktop.offsetParent !== null ? desktop : mobile;
+  (target ?? desktop ?? mobile)?.scrollIntoView({ behavior: "smooth", block: "start" });
+};
 
 /*
   Figma canvas: 1920px wide — all px values divided by 1920 to get vw.
@@ -100,6 +107,13 @@ const dtServices = [
 export default function ServicesContent() {
   const [activeTab, setActiveTab] = useState<"dts" | "dis">("dts");
 
+  useEffect(() => {
+    const hash = window.location.hash.slice(1);
+    if (!hash) return;
+    const timer = setTimeout(() => scrollToService(hash), 100);
+    return () => clearTimeout(timer);
+  }, []);
+
   return (
     <>
     {/* ── MOBILE (< lg) ── */}
@@ -140,7 +154,7 @@ export default function ServicesContent() {
       {/* Service cards */}
       <div className="px-5 py-6 flex flex-col gap-5">
         {dtServices.map((svc) => (
-          <div key={svc.num} id={slugify(svc.title)} className="bg-white rounded-2xl border border-black/8 overflow-hidden" style={{ scrollMarginTop: "6rem" }}>
+          <div key={svc.num} id={`${slugify(svc.title)}-m`} className="bg-white rounded-2xl border border-black/8 overflow-hidden" style={{ scrollMarginTop: "6rem" }}>
             {/* Image */}
             {/* eslint-disable-next-line @next/next/no-img-element */}
             <img src={svc.image} alt={svc.title} className="w-full h-48 object-cover" />

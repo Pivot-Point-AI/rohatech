@@ -15,12 +15,23 @@ export default function TechPartners() {
   return (
     <>
     {/* ── MOBILE ── */}
-    <section id="technologies" className="block md:hidden bg-black px-5 py-14 text-center">
-      <span className="inline-block px-5 py-2 rounded-full border border-white/20 bg-white/10 text-white text-xs tracking-widest uppercase mb-5">Collaborations</span>
-      <h2 className="text-white font-bold uppercase text-2xl mb-10">Technology Partners</h2>
-      <div className="grid grid-cols-3 gap-5 max-w-xs mx-auto [&>*:last-child]:col-start-2">
+    <section id="technologies" className="relative block md:hidden bg-black px-5 py-14 text-center overflow-hidden">
+      <svg
+        className="absolute inset-0 w-full h-full pointer-events-none"
+        viewBox="0 0 400 600"
+        preserveAspectRatio="xMidYMid slice"
+        aria-hidden="true"
+      >
+        <circle cx="200" cy="300" r="120" fill="none" stroke="rgba(255,255,255,0.2)" strokeWidth="1"/>
+        <circle cx="200" cy="300" r="200" fill="none" stroke="rgba(255,255,255,0.4)" strokeWidth="1"/>
+        <circle cx="200" cy="300" r="280" fill="none" stroke="rgba(255,255,255,0.6)" strokeWidth="1"/>
+      </svg>
+
+      <span className="relative inline-block px-5 py-2 rounded-full border border-white/20 bg-white/10 text-white text-xs tracking-widest uppercase mb-5">Collaborations</span>
+      <h2 className="relative text-white font-bold uppercase text-2xl mb-10">Technology Partners</h2>
+      <div className="relative grid grid-cols-3 gap-5 max-w-xs mx-auto [&>*:last-child]:col-start-2">
         {circles.map(({ imgSrc, imgW, imgH, xOffset }) => (
-          <div key={xOffset} className="w-20 h-20 rounded-full flex items-center justify-center mx-auto">
+          <div key={xOffset} className="w-20 h-20 rounded-full bg-[#181818] flex items-center justify-center mx-auto">
             <Image src={imgSrc} alt="Partner" width={imgW} height={imgH} className="object-contain w-14 h-14" />
           </div>
         ))}

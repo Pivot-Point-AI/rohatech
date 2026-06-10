@@ -1,4 +1,7 @@
-import Link from "next/link";
+"use client";
+
+import { usePathname } from "next/navigation";
+import { scrollToService } from "./ServicesContent";
 import styles from "./Footer.module.css";
 
 const serviceLinks = [
@@ -9,6 +12,17 @@ const serviceLinks = [
 ];
 
 export default function Footer() {
+  const pathname = usePathname();
+
+  const handleServiceClick = (e: React.MouseEvent<HTMLAnchorElement>, slug: string) => {
+    e.preventDefault();
+    if (pathname === "/services") {
+      scrollToService(slug);
+    } else {
+      window.location.href = `/services#${slug}`;
+    }
+  };
+
   return (
     <>
     {/* ── MOBILE ── */}
@@ -26,7 +40,7 @@ export default function Footer() {
         <a href="mailto:info@rohatech.com.pk" className="text-white font-medium text-sm hover:text-[#78EB54] transition-colors">info@rohatech.com.pk</a>
         <div className="mt-8 flex flex-col gap-2">
           {serviceLinks.map(({ label, slug }) => (
-            <Link key={label} href={`/services#${slug}`} className="text-white text-sm hover:text-[#78EB54] transition-colors">{label}</Link>
+            <a key={label} href={`/services#${slug}`} onClick={(e) => handleServiceClick(e, slug)} className="text-white text-sm hover:text-[#78EB54] transition-colors">{label}</a>
           ))}
         </div>
         <h2 className={`text-white font-medium mt-10 text-5xl leading-tight ${styles.mobileHeading}`}>Built for Growth</h2>
@@ -76,14 +90,15 @@ export default function Footer() {
 
       {/* Service links — right/top/width are per-item, stay inline */}
       {serviceLinks.map(({ label, right, width, top, slug }) => (
-        <Link
+        <a
           key={label}
           href={`/services#${slug}`}
+          onClick={(e) => handleServiceClick(e, slug)}
           className={`absolute text-white font-normal hover:text-[#78EB54] transition-colors flex items-center ${styles.serviceLink}`}
           style={{ right, top, width }}
         >
           {label}
-        </Link>
+        </a>
       ))}
 
       {/* "Built for Growth" */}

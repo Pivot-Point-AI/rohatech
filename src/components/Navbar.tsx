@@ -12,6 +12,7 @@ const links = [
   { label: "Solutions",    href: "/solutions",     dropdown: false },
   { label: "Contact",      href: "/contact",       dropdown: false },
   { label: "Testimonials", href: "/testimonials",  dropdown: false },
+  { label: "Careers",      href: "/careers",       dropdown: false },
 ];
 
 const slugify = (title: string) =>

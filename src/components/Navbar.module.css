@@ -24,14 +24,14 @@
 }
 
 .navList {
-  left: calc(50% - 11.354vw);
-  gap: 2.083vw;
-  width: 27.656vw;
+  left: calc(50% - 13.5vw);
+  gap: 1.6vw;
+  width: 32vw;
 }
 
 .navLink {
-  font-size: 1vw;
-  line-height: 1.4vw;
+  font-size: 1.15vw;
+  line-height: 1.55vw;
   gap: 0.208vw;
 }
 

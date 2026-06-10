@@ -1,0 +1,52 @@
+.desktopHero {
+  aspect-ratio: 1920 / 440;
+  background: #F3F4F6;
+}
+
+.bgWrapper {
+  top: -5vw;
+  height: 30vw;
+}
+
+.darkGradient {
+  height: 27vw;
+  bottom: 0;
+  background: linear-gradient(180deg, #000000 36.34%, rgba(0, 0, 0, 0) 100%);
+  border-radius: 0 0 10.417vw 10.417vw;
+}
+
+.heading {
+  left: 50%;
+  transform: translateX(calc(-50% + 0.026vw));
+  top: 6vw;
+  width: 51.406vw;
+  font-size: 2.813vw;
+  line-height: 120%;
+}
+
+.greenSpan {
+  color: #78EB54;
+}
+
+.subtext {
+  left: 50%;
+  transform: translateX(calc(-50% + 0.026vw));
+  top: 10.5vw;
+  width: 36vw;
+  font-size: 1.146vw;
+  line-height: 1.6vw;
+}
+
+.applyBtn {
+  left: 50%;
+  transform: translateX(-50%);
+  top: 17.5vw;
+  width: 11.875vw;
+  height: 2.917vw;
+  border-radius: 9999px;
+}
+
+.applyBtnText {
+  font-size: 0.938vw;
+  line-height: 1.25vw;
+}
