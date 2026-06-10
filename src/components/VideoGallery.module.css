@@ -2,6 +2,19 @@
   letter-spacing: -0.025em;
 }
 
+@keyframes mobileAutoScroll {
+  0%   { transform: translateX(0); }
+  100% { transform: translateX(-624px); }
+}
+
+.mobileTrack {
+  display: flex;
+  gap: 16px;
+  width: max-content;
+  padding-left: 20px;
+  animation: mobileAutoScroll 14s linear infinite;
+}
+
 .desktopSection {
   aspect-ratio: 1920 / 762;
 }

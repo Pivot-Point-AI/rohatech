@@ -79,13 +79,16 @@ export default function TestimonialsSection() {
     <section className="block md:hidden bg-white">
 
       {/* Dark hero header */}
-      <div className="bg-black px-6 pt-16 pb-12 rounded-b-3xl">
+      <div className="relative overflow-hidden px-6 pt-16 pb-12 rounded-b-3xl">
+        <Image src="/images/about-hero-bg.webp" alt="" fill sizes="100vw" className="object-cover object-center" priority aria-hidden="true" />
+        <div className="absolute inset-0 bg-black/70" />
+        <div className="relative z-10">
         <div className="w-8 h-[3px] bg-[#78EB54] rounded-full mb-4" />
-        <p className="text-white/50 text-[10px] uppercase tracking-[0.2em] mb-3">Client Stories</p>
+        <p className="text-white/50 text-[10px] font-bold uppercase tracking-[0.2em] mb-3">Client Stories</p>
         <h1 className="text-white font-bold text-[34px] leading-[1.15] mb-3" style={{ letterSpacing: "-0.02em" }}>
           What Our Clients Say
         </h1>
-        <p className="text-white/60 text-sm leading-relaxed max-w-[90%]">
+        <p className="text-white text-sm leading-relaxed max-w-[90%]">
           Real results from real businesses — powered by RohaTech solutions.
         </p>
 
@@ -103,6 +106,7 @@ export default function TestimonialsSection() {
             <p className="text-[#78EB54] text-2xl font-bold leading-none">5★</p>
             <p className="text-white/50 text-[10px] mt-1 uppercase tracking-wide">Rated</p>
           </div>
+        </div>
         </div>
       </div>
 

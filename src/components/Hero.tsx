@@ -13,7 +13,7 @@ export default function Hero() {
       <div className="absolute bottom-0 left-0 right-0 z-10 px-5 pb-12 flex flex-col gap-4">
 
         {/* Label */}
-        <p className="text-white/60 text-[11px] uppercase tracking-[0.2em] font-medium pl-px">Best IT Solutions Company</p>
+        {/* <p className="text-white/60 text-[11px] uppercase tracking-[0.2em] font-medium pl-px">Best IT Solutions Company</p> */}
 
         {/* Headline */}
         <h1 className={`text-white font-normal uppercase leading-tight ${styles.mobileHeading}`}>
@@ -21,7 +21,7 @@ export default function Hero() {
         </h1>
 
         {/* Description */}
-        <p className="text-white/70 text-[13px] leading-relaxed max-w-[90%]">
+        <p className="text-white text-[13px] leading-relaxed max-w-[90%]">
           We build smart, scalable solutions that boost efficiency and give you a competitive edge.
         </p>
 

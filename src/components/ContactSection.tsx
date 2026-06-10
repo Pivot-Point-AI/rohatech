@@ -1,6 +1,7 @@
 "use client";
 
 import { useState } from "react";
+import Image from "next/image";
 import styles from "./ContactSection.module.css";
 
 type Errors = { name?: string; phone?: string; email?: string; message?: string };
@@ -64,13 +65,16 @@ export default function ContactSection() {
     <section className="block md:hidden bg-white">
 
       {/* Hero header */}
-      <div className="bg-black px-6 pt-16 pb-12 rounded-b-3xl">
+      <div className="relative overflow-hidden px-6 pt-16 pb-12 rounded-b-3xl">
+        <Image src="/images/about-hero-bg.webp" alt="" fill sizes="100vw" className="object-cover object-center" priority aria-hidden="true" />
+        <div className="absolute inset-0 bg-black/70" />
+        <div className="relative z-10">
         <div className="w-8 h-[3px] bg-[#78EB54] rounded-full mb-4" />
         <p className="text-white/50 text-[10px] uppercase tracking-[0.2em] mb-3">Get In Touch</p>
         <h1 className="text-white font-bold text-[34px] leading-[1.15] mb-3" style={{ letterSpacing: "-0.02em" }}>
           Contact Us
         </h1>
-        <p className="text-white/60 text-sm leading-relaxed max-w-[90%]">
+        <p className="text-white text-sm leading-relaxed max-w-[90%]">
           Reach us via phone, email, or the form below — we&apos;re here to help.
         </p>
 
@@ -99,17 +103,18 @@ export default function ContactSection() {
               <p className="text-white text-sm font-medium">info@rohatech.com.pk</p>
             </div>
           </a>
-          <div className="flex items-start gap-3 bg-white/8 border border-white/10 rounded-2xl px-4 py-3">
-            <div className="w-9 h-9 bg-[#78EB54] rounded-xl flex items-center justify-center flex-shrink-0 mt-0.5">
+          <div className="flex items-center gap-3 bg-white/8 border border-white/10 rounded-2xl px-4 py-3">
+            <div className="w-9 h-9 bg-[#78EB54] rounded-xl flex items-center justify-center flex-shrink-0">
               <svg width="14" height="14" viewBox="0 0 31 31" fill="none">
                 <path d="M15.5 2C10.25 2 6 6.25 6 11.5c0 8.25 9.5 17.5 9.5 17.5s9.5-9.25 9.5-17.5C25 6.25 20.75 2 15.5 2zm0 13a3.5 3.5 0 110-7 3.5 3.5 0 010 7z" fill="white"/>
               </svg>
             </div>
             <div>
               <p className="text-white/50 text-[10px] uppercase tracking-wide mb-1">Address</p>
-              <p className="text-white text-sm leading-relaxed">Corporate and Business Square, Wazir Arcade, Gulberg Greens, Islamabad 44000.</p>
+              <p className="text-white text-sm leading-relaxed">Corporate and Business Square, 1st/2nd floor wazir arcade, Park Ave, Block C Gulberg Greens, Islamabad, Islamabad Capital Territory 44000.</p>
             </div>
           </div>
+        </div>
         </div>
       </div>
 
@@ -121,29 +126,29 @@ export default function ContactSection() {
           <div>
             <label className="block text-xs font-medium mb-1.5" style={{ color: "#000000" }}>Your Name</label>
             <input name="name" value={form.name} onChange={handleChange} placeholder="Enter your name"
-              className="w-full bg-[#F3F4F6] rounded-xl px-4 py-3.5 text-sm outline-none border transition-colors"
+              className="w-full bg-[#F3F4F6] rounded-xl px-4 py-4 text-lg outline-none border transition-colors"
               style={{ color: "#000000", borderColor: errors.name ? "#ef4444" : "transparent" }} />
             {errors.name && <p className="text-xs mt-1" style={{ color: "#ef4444" }}>{errors.name}</p>}
           </div>
           <div>
             <label className="block text-xs font-medium mb-1.5" style={{ color: "#000000" }}>Phone Number</label>
             <input name="phone" value={form.phone} onChange={handleChange} placeholder="Enter your phone number"
-              className="w-full bg-[#F3F4F6] rounded-xl px-4 py-3.5 text-sm outline-none border transition-colors"
+              className="w-full bg-[#F3F4F6] rounded-xl px-4 py-4 text-lg outline-none border transition-colors"
               style={{ color: "#000000", borderColor: errors.phone ? "#ef4444" : "transparent" }} />
             {errors.phone && <p className="text-xs mt-1" style={{ color: "#ef4444" }}>{errors.phone}</p>}
           </div>
           <div>
             <label className="block text-xs font-medium mb-1.5" style={{ color: "#000000" }}>Email</label>
             <input name="email" type="email" value={form.email} onChange={handleChange} placeholder="Enter your email"
-              className="w-full bg-[#F3F4F6] rounded-xl px-4 py-3.5 text-sm outline-none border transition-colors"
+              className="w-full bg-[#F3F4F6] rounded-xl px-4 py-4 text-lg outline-none border transition-colors"
               style={{ color: "#000000", borderColor: errors.email ? "#ef4444" : "transparent" }} />
             {errors.email && <p className="text-xs mt-1" style={{ color: "#ef4444" }}>{errors.email}</p>}
           </div>
           <div>
             <label className="block text-xs font-medium mb-1.5" style={{ color: "#000000" }}>Your Message</label>
             <textarea name="message" value={form.message} onChange={handleChange} rows={4}
-              className="w-full bg-[#F3F4F6] rounded-xl px-4 py-3.5 text-sm outline-none border transition-colors resize-none"
-              style={{ color: "#000000", borderColor: errors.message ? "#ef4444" : "transparent" }} />
+              className="w-full bg-[#F3F4F6] rounded-xl px-4 py-4 text-lg font-sans outline-none border transition-colors resize-none"
+              style={{ color: "#000000", fontFamily: "inherit", borderColor: errors.message ? "#ef4444" : "transparent" }} />
             {errors.message && <p className="text-xs mt-1" style={{ color: "#ef4444" }}>{errors.message}</p>}
           </div>
           <button type="submit" disabled={status === "sending"}

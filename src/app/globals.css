@@ -51,11 +51,16 @@ html {
 /* Normalize browser autofill appearance */
 input:-webkit-autofill,
 input:-webkit-autofill:hover,
-input:-webkit-autofill:focus {
-  -webkit-text-fill-color: #717171;
-  -webkit-box-shadow: 0 0 0px 1000px white inset;
+input:-webkit-autofill:focus,
+textarea:-webkit-autofill,
+textarea:-webkit-autofill:hover,
+textarea:-webkit-autofill:focus {
+  -webkit-text-fill-color: #000000;
+  -webkit-box-shadow: 0 0 0px 1000px #F3F4F6 inset;
   transition: background-color 5000s ease-in-out 0s;
-  caret-color: #717171;
+  caret-color: #000000;
+  font-family: inherit;
+  font-size: inherit;
 }
 
 body {
@@ -220,6 +225,7 @@ body {
   height: 15.573vw;       /* 299/1920 */
   overflow: hidden;
   flex-shrink: 0;
+  scroll-margin-top: 6rem;
 }
 
 /* Left block — left=120, w=441-492 */

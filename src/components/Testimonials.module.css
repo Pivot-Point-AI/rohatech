@@ -3,7 +3,7 @@
 }
 
 .desktopSection {
-  aspect-ratio: 1920 / 1080;
+  aspect-ratio: 1920 / 960;
 }
 
 /* Avatar circles — width/height/left/top are computed from data, stay inline */

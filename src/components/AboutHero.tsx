@@ -36,7 +36,7 @@ export default function AboutHero() {
             Powering enterprises with secure, scalable, and future-ready{" "}
             <span className={styles.mobileGreenSpan}>technology solutions.</span>
           </h1>
-          <p className="text-white/55 text-xs leading-relaxed max-w-[260px]">
+          <p className="text-white text-xs leading-relaxed max-w-[260px]">
             RohaTech Recognized for Excellence in Digital Infrastructure Innovation
           </p>
           <Link
@@ -66,7 +66,7 @@ export default function AboutHero() {
       <div className="bg-[#F3F4F6] px-6 pt-2 pb-10 border-t border-black/10">
         <p className="text-xs font-semibold uppercase tracking-widest mb-3 mt-8" style={{ color: "#000000" }}>Our Vision</p>
         <p className="text-sm leading-relaxed" style={{ color: "#000000cc" }}>
-          Our vision is built upon the foundation of our core values — placing customers and employees at the heart of everything we do. We are committed to being reliable, dependable, disciplined, and diligent.
+          Our vision is built upon the foundation of our core values placing customers and employees at the heart of everything we do. We are committed to being reliable, dependable, disciplined, and diligent.
         </p>
       </div>
 

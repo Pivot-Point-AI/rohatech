@@ -35,8 +35,9 @@ export default function Testimonials() {
       </div>
 
       <div className="bg-[#F3F4F6] rounded-3xl p-6 text-left">
-        <span className="text-4xl text-black/20 font-serif leading-none">&ldquo;</span>
+        <span className="text-6xl text-black/20 font-serif leading-none">&ldquo;</span>
         <p className="text-sm text-black leading-relaxed mt-2">Working with RohaTech was a game changer for our organization. Their technical excellence, structured delivery approach, and commitment to quality exceeded our expectations. The level of expertise and reliability they bring to digital infrastructure projects is truly impressive.</p>
+        <span className="block text-right text-6xl text-black/20 font-serif leading-none">&rdquo;</span>
       </div>
     </section>
 

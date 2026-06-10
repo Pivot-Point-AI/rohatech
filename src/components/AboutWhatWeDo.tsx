@@ -8,7 +8,7 @@ import styles from "./AboutWhatWeDo.module.css";
 const faqs = [
   {
     q: "Does Roha Tech have a global presence?",
-    a: "Our vision is built upon the foundation of our core values — placing customers and employees at the heart of everything we do. We are committed to being reliable, dependable, disciplined, and diligent. We believe that team spirit and collaboration are the driving forces that can improve lives and shape a better future for generations to come.",
+    a: "Our vision is built upon the foundation of our core values placing customers and employees at the heart of everything we do. We are committed to being reliable, dependable, disciplined, and diligent. We believe that team spirit and collaboration are the driving forces that can improve lives and shape a better future for generations to come.",
     qW: "71.060%",
   },
   {
@@ -61,7 +61,7 @@ export default function AboutWhatWeDo() {
 
       {/* FAQ accordion */}
       <div className="px-5 pt-6 pb-10 flex flex-col gap-3">
-        <p className="text-[10px] uppercase tracking-[0.2em] mb-1" style={{ color: "#00000055" }}>FAQs</p>
+        <p className="text-[10px] uppercase tracking-[0.2em] mb-1" style={{ color: "#000000",fontWeight: "500" }}>FAQs</p>
         {faqs.map((faq, i) => {
           const isOpen = mobileOpen === i;
           return (

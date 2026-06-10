@@ -65,10 +65,10 @@
 .faqCard {
   right: 4.167%;
   width: 43.810%;
-  background: rgba(255, 255, 255, 0.1);
+  background:#b8aaaa1a;
   backdrop-filter: blur(10px);
   -webkit-backdrop-filter: blur(10px);
-  border-radius: 1.042vw;
+  border-radius: 2.042vw;
   transition: height 0.3s ease;
 }
 
@@ -87,7 +87,7 @@
   top: 39.754%;
   width: 88.315%;
   height: 39.344%;
-  font-size: 0.729vw;
+  font-size: 0.929vw;
   line-height: 1.25vw;
   font-weight: 400;
 }

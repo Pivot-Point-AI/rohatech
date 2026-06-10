@@ -2,10 +2,10 @@ import Link from "next/link";
 import styles from "./Footer.module.css";
 
 const serviceLinks = [
-  { label: "Software Development", right: "5.625vw",  width: "14.792vw", top: "19.896vw" },
-  { label: "UI/UX Design",         right: "11.823vw", width: "8.594vw",  top: "21.979vw" },
-  { label: "Web Development",      right: "8.333vw",  width: "12.083vw", top: "24.063vw" },
-  { label: "Managed Services",     right: "8.281vw",  width: "12.135vw", top: "26.146vw" },
+  { label: "Software Development", right: "5.625vw",  width: "14.792vw", top: "19.896vw", slug: "application-modernization" },
+  { label: "UI/UX Design",         right: "11.823vw", width: "8.594vw",  top: "21.979vw", slug: "ui-ux-design" },
+  { label: "Web Development",      right: "8.333vw",  width: "12.083vw", top: "24.063vw", slug: "web-and-full-stack" },
+  { label: "Managed Services",     right: "8.281vw",  width: "12.135vw", top: "26.146vw", slug: "application-integration" },
 ];
 
 export default function Footer() {
@@ -22,11 +22,11 @@ export default function Footer() {
       />
       <div className="absolute inset-0 bg-black/50" />
       <div className="relative z-10">
-        <p className="text-white font-medium text-base mb-1">Do you have any questions?<br />Drop us an email and we&apos;ll get right back to you...</p>
+        <p className="text-white font-medium text-base mb-1">Do you have any questions?<br />Drop us an email and we&apos;ll get right back to you</p>
         <a href="mailto:info@rohatech.com.pk" className="text-white font-medium text-sm hover:text-[#78EB54] transition-colors">info@rohatech.com.pk</a>
         <div className="mt-8 flex flex-col gap-2">
-          {serviceLinks.map(({ label }) => (
-            <Link key={label} href="/services" className="text-white text-sm hover:text-[#78EB54] transition-colors">{label}</Link>
+          {serviceLinks.map(({ label, slug }) => (
+            <Link key={label} href={`/services#${slug}`} className="text-white text-sm hover:text-[#78EB54] transition-colors">{label}</Link>
           ))}
         </div>
         <h2 className={`text-white font-medium mt-10 text-5xl leading-tight ${styles.mobileHeading}`}>Built for Growth</h2>
@@ -63,7 +63,7 @@ export default function Footer() {
 
       {/* "Do you have any questions?" */}
       <p className={`absolute text-white font-medium ${styles.questionText}`}>
-        Do you have any questions?<br />Drop us an email and we&apos;ll get right back to you...
+        Do you have any questions?<br />Drop us an email and we&apos;ll get right back to you
       </p>
 
       {/* "info@rohatech.com.pk" */}
@@ -75,10 +75,10 @@ export default function Footer() {
       </a>
 
       {/* Service links — right/top/width are per-item, stay inline */}
-      {serviceLinks.map(({ label, right, width, top }) => (
+      {serviceLinks.map(({ label, right, width, top, slug }) => (
         <Link
           key={label}
-          href="/services"
+          href={`/services#${slug}`}
           className={`absolute text-white font-normal hover:text-[#78EB54] transition-colors flex items-center ${styles.serviceLink}`}
           style={{ right, top, width }}
         >

@@ -1,6 +1,7 @@
 "use client";
 
 import { useState } from "react";
+import Image from "next/image";
 
 const slugify = (title: string) =>
   title.toLowerCase().replace(/&/g, "and").replace(/[^a-z0-9]+/g, "-").replace(/(^-|-$)/g, "");
@@ -105,13 +106,17 @@ export default function ServicesContent() {
     <section className="block lg:hidden bg-white">
 
       {/* Dark hero header */}
-      <div className="bg-black px-6 pt-16 pb-12 rounded-b-3xl">
-        <div className="w-8 h-[3px] bg-[#78EB54] rounded-full mb-4" />
-        <p className="text-[10px] uppercase tracking-[0.2em] mb-3" style={{ color: "rgba(255,255,255,0.5)" }}>What We Offer</p>
-        <h1 className="font-bold text-[34px] leading-[1.15] mb-3" style={{ color: "#ffffff", letterSpacing: "-0.02em" }}>Services</h1>
-        <p className="text-sm leading-relaxed max-w-[90%]" style={{ color: "rgba(255,255,255,0.6)" }}>
-          Delivering scalable digital solutions designed to empower businesses, optimize operations, and drive sustainable growth.
-        </p>
+      <div className="relative overflow-hidden px-6 pt-16 pb-12 rounded-b-3xl">
+        <Image src="/images/about-hero-bg.webp" alt="" fill sizes="100vw" className="object-cover object-center" priority aria-hidden="true" />
+        <div className="absolute inset-0 bg-black/70" />
+        <div className="relative z-10">
+          <div className="w-8 h-[3px] bg-[#78EB54] rounded-full mb-4" />
+          <p className="text-[10px] font-bold uppercase tracking-[0.2em] mb-3" style={{ color: "rgba(255,255,255,0.5)" }}>What We Offer</p>
+          <h1 className="font-bold text-[34px] leading-[1.15] mb-3" style={{ color: "#ffffff", letterSpacing: "-0.02em" }}>Services</h1>
+          <p className="text-sm leading-relaxed max-w-[90%]" style={{ color: "#ffffff" }}>
+            Delivering scalable digital solutions designed to empower businesses, optimize operations, and drive sustainable growth.
+          </p>
+        </div>
       </div>
 
       {/* Tab pills */}
@@ -135,7 +140,7 @@ export default function ServicesContent() {
       {/* Service cards */}
       <div className="px-5 py-6 flex flex-col gap-5">
         {dtServices.map((svc) => (
-          <div key={svc.num} id={slugify(svc.title)} className="bg-white rounded-2xl border border-black/8 overflow-hidden">
+          <div key={svc.num} id={slugify(svc.title)} className="bg-white rounded-2xl border border-black/8 overflow-hidden" style={{ scrollMarginTop: "6rem" }}>
             {/* Image */}
             {/* eslint-disable-next-line @next/next/no-img-element */}
             <img src={svc.image} alt={svc.title} className="w-full h-48 object-cover" />
